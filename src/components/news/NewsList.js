@@ -1,0 +1,1 @@
+console.log("NewsList.js");
