@@ -11,7 +11,8 @@ export default class MainPage extends Component {
         tasks: [],
         messages: [],
         events: [],
-        friends: []
+        friends: [],
+        login: true
     }
 
 
@@ -102,6 +103,13 @@ export default class MainPage extends Component {
         })
     }
 
+
+    // Logout function 
+    handleLogout = () => {
+        sessionStorage.removeItem("credentials");
+        this.setState({login: false})
+    }
+
     /////////////////////////// end of Kayla's stuff/////////////////////////////////////////////////////
 
     render() {
@@ -110,7 +118,7 @@ export default class MainPage extends Component {
                 {
                     this.props.isSessionAuthenticated() === true &&
                     <div className="wrapper">
-                    <NavBar />
+                    <NavBar handleLogout={this.handleLogout}/>
                     <Route exact path="/news" render={(props) => {
                             return <NewsList {...props} allNews={this.state.news} delete={this.delete} />
                         }} />
