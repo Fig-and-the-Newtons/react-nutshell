@@ -5,6 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css"
 export default class EventsList extends Component {
 
 
+
     render () {
         return (
             <React.Fragment>
@@ -18,7 +19,8 @@ export default class EventsList extends Component {
                                     <h3 className="class-title">{event.name}</h3>
                                     <p>{event.location}</p>
                                     <p>{event.date}</p>
-
+                                    <button className={`delete--${event.id}`} 
+                                    onClick={() => this.props.delete("events", `${event.id}`)}>Delete</button>
                                 </div>
                              </div>
 

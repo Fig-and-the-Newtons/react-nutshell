@@ -75,6 +75,7 @@ export default class MainPage extends Component {
                         <NavBar />
                         <Route exact path="/events" render={props => {
                             return < EventsList {...props} events={this.state.events}
+                                                delete={this.delete}
                             />
                         }}
                         />

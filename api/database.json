@@ -15,18 +15,6 @@
   "messages": [],
   "events": [
     {
-      "id": 1,
-      "name": "dinner",
-      "location": "nashville",
-      "date": "May 1"
-    },
-    {
-      "name": "Lunch",
-      "location": "Bellvue",
-      "date": "2018-09-26",
-      "id": 2
-    },
-    {
       "name": "newest one",
       "location": "ye yayay",
       "date": "2018-09-12",
@@ -40,9 +28,15 @@
     },
     {
       "name": "sup dude ",
-      "location": "this one is it big boy",
-      "date": "2018-09-06",
-      "id": 5
+      "location": "fff",
+      "date": "2018-09-21",
+      "id": 6
+    },
+    {
+      "name": "Practicing my crud skills",
+      "location": "Nashville",
+      "date": "2018-09-21",
+      "id": 7
     }
   ],
   "news": [],
