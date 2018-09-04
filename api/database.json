@@ -9,11 +9,52 @@
       "userName": "kayla",
       "password": "kayla",
       "id": 2
+    },
+    {
+      "userName": "me",
+      "password": "123",
+      "id": 3
     }
   ],
   "friends": [],
   "messages": [],
   "events": [],
-  "news": [],
+  "news": [
+    {
+      "title": "User 2",
+      "article": "kfskdfn asdn j dfhsd asdfh fasdjdf sdnjkasnj hfuiasf jiadsjfasdji adijf s",
+      "link": "https://github.com/Fig-and-the-Newtons/react-nutshell/projects/1",
+      "userId": 2,
+      "id": 4
+    },
+    {
+      "title": "User 3",
+      "article": "asdfadfasd",
+      "link": "https://github.com/Fig-and-the-Newtons/react-nutshell/projects/1",
+      "userId": 3,
+      "id": 5
+    },
+    {
+      "title": "User 3",
+      "article": "kfskdfn asdn j dfhsd asdfh fasdjdf sdnjkasnj hfuiasf jiadsjfasdji adijf s",
+      "link": "https://github.com/Fig-and-the-Newtons/react-nutshell/projects/1",
+      "userId": 3,
+      "id": 6
+    },
+    {
+      "title": "User 3",
+      "article": "kfskdfn asdn j dfhsd asdfh fasdjdf sdnjkasnj hfuiasf jiadsjfasdji adijf s",
+      "link": "https://github.com/Fig-and-the-Newtons/react-nutshell/projects/1",
+      "userId": 3,
+      "id": 7
+    },
+    {
+      "title": "User 4",
+      "article": "asdfadfasd",
+      "link": "https://github.com/Fig-and-the-Newtons/react-nutshell/projects/1",
+      "userId": 4,
+      "id": 8
+    }
+  ],
   "tasks": []
 }

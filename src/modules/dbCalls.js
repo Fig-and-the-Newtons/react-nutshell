@@ -2,7 +2,7 @@ const remoteURL = "http://localhost:5002"
 
 export default Object.create(null, {
     get: {
-        value: (resource, id) => {
+        value: (resource, id) => { 
             return fetch(`${remoteURL}/${resource}/${id}`)
             .then(r => r.json())
         }
@@ -53,5 +53,15 @@ export default Object.create(null, {
                 body: JSON.stringify(newObject)
             }).then(e => e.json())
         }
-    }
+    },
+
+
+    // kayla's calls 
+    getDataByUserId: {
+        value: (userId, resource) => {
+            return fetch(`${remoteURL}/users/${userId}/${resource}?_sort=date&_order=asc`)
+            .then(response => response.json())
+        }
+    }  
+    // end of Kayla's bdCalls
 })
