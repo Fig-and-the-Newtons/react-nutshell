@@ -1,8 +1,19 @@
 {
-    "users": [],
-    "friends": [],
-    "messages": [],
-    "events": [],
-    "news": [],
-    "tasks": []
+  "users": [
+    {
+      "userName": "alexfont",
+      "password": "alex",
+      "id": 1
+    },
+    {
+      "userName": "kayla",
+      "password": "kayla",
+      "id": 2
+    }
+  ],
+  "friends": [],
+  "messages": [],
+  "events": [],
+  "news": [],
+  "tasks": []
 }

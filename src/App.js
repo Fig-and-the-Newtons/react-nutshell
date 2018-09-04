@@ -1,21 +1,28 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Route, Redirect } from 'react-router-dom'
 
-class App extends Component {
+import Login from "./components/login/Login"
+import './App.css';
+import MainPage from './components/MainPage';
+
+export default class App extends Component {
+  isSessionAuthenticated = () => sessionStorage.getItem("credentials") !== null;
+
   render() {
+
+
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
+      <React.Fragment>
+        <Route exact path="/login" component={Login} />
+        <Route exact path="/" render={(props) => {
+          if (this.isSessionAuthenticated()) {
+            return <MainPage />
+          } else {
+            return <Redirect to="/login" />
+          }
+        }} />
+        
+      </React.Fragment>
+    )
   }
 }
-
-export default App;
