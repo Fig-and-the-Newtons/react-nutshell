@@ -18,7 +18,7 @@ export default class Login extends Component {
 
         dbCalls.getAll("users")
         .then(users => {
-           const userNameExists = users.find(u => u.userName === this.state.userName) || {};
+           const userNameExists = users.find(u => u.userName === this.state.userName);
             if (userNameExists) {
                 sessionStorage.setItem(
                     "credentials",
@@ -29,7 +29,7 @@ export default class Login extends Component {
                 dbCalls.post("users", {userName: this.state.userName, password: this.state.password})
                 .then(() => dbCalls.getAll("users"))
                 .then(users => {
-                    const userNameExists = users.find(u => u.userName === this.state.userName) || {};
+                    const userNameExists = users.find(u => u.userName === this.state.userName);
                     sessionStorage.setItem(
                         "credentials",
                         JSON.stringify({userNameExists})
@@ -40,6 +40,34 @@ export default class Login extends Component {
         }
 
 
+
     })
 }
+
+render() {
+    return (
+        <form onSubmit={this.handleLogin}>
+            <fieldset>
+                <h1 className="h3 mb-3 font-weight-normal">Please sign in</h1>
+                <label htmlFor="inputEmail">User Name: </label>
+                <input onChange={this.handleFieldChange} type="text"
+                   id="userName"
+                   placeholder="User Name"
+                   required="" autoFocus="" /></fieldset>
+            <fieldset>
+                <label htmlFor="inputPassword">Password: </label>
+                <input onChange={this.handleFieldChange} type="password"
+                   id="password"
+                   placeholder="Password"
+                   required="" /></fieldset>
+            {/* <fieldset>
+                <label>Remember Me</label>
+                <input type="checkbox" onChange={this.checkbox}></input>
+            </fieldset> */}
+            <fieldset>
+                <button type="submit">Sign in</button></fieldset>
+        </form>
+    )
+}
+
 }
