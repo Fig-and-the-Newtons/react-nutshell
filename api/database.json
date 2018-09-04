@@ -13,7 +13,38 @@
   ],
   "friends": [],
   "messages": [],
-  "events": [],
+  "events": [
+    {
+      "id": 1,
+      "name": "dinner",
+      "location": "nashville",
+      "date": "May 1"
+    },
+    {
+      "name": "Lunch",
+      "location": "Bellvue",
+      "date": "2018-09-26",
+      "id": 2
+    },
+    {
+      "name": "newest one",
+      "location": "ye yayay",
+      "date": "2018-09-12",
+      "id": 3
+    },
+    {
+      "name": "hey ",
+      "location": "guys",
+      "date": "2018-09-14",
+      "id": 4
+    },
+    {
+      "name": "sup dude ",
+      "location": "this one is it big boy",
+      "date": "2018-09-06",
+      "id": 5
+    }
+  ],
   "news": [],
   "tasks": []
 }

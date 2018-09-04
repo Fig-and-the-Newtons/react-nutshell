@@ -1,7 +1,9 @@
-// import { Route, Redirect } from 'react-router-dom'
+import { Route, Redirect } from 'react-router-dom'
 import React, { Component } from "react"
 import NavBar from "./navbar/Navbar"
 import dbCalls from "../modules/dbCalls"
+import EventsList from "./events/EventsList"
+import EventsForm from "./events/EventsForm";
 
 export default class MainPage extends Component {
     state = {
@@ -16,57 +18,77 @@ export default class MainPage extends Component {
         const newState = {}
 
         dbCalls.getAll("news")
-        .then(allNews => {
-            newState.news = allNews
-        })
+            .then(allNews => {
+                newState.news = allNews
+            })
         dbCalls.getAll("tasks")
-        .then(allTasks => {
-            newState.tasks = allTasks
-        })
+            .then(allTasks => {
+                newState.tasks = allTasks
+            })
         dbCalls.getAll("messages")
-        .then(allMessages => {
-            newState.messages = allMessages
-                   
-        })
+            .then(allMessages => {
+                newState.messages = allMessages
+
+            })
         dbCalls.getAll("events")
-        .then(allEvents => {
-            newState.events = allEvents
-           
-        })
+            .then(allEvents => {
+                newState.events = allEvents
+
+            })
         dbCalls.getAll("friends")
-        .then(allFriends => {
-            newState.friends = allFriends
-           
-        })
-        .then(() => this.setState(newState))
+            .then(allFriends => {
+                newState.friends = allFriends
+
+            })
+            .then(() => this.setState(newState))
     }
 
-    
-delete = (resource, id) => {dbCalls.delete(resource, id)
-            .then(() => dbCalls.getAll(resource))
-            .then(returnObject => this.setState({[resource]: returnObject}))
-        }
 
-post = (resource, newObject) => {return dbCalls.post(resource, newObject)
+    delete = (resource, id) => {
+        dbCalls.delete(resource, id)
+        .then(() => dbCalls.getAll(resource))
+        .then(returnObject => this.setState({ [resource]: returnObject }))
+    }
+
+    post = (resource, newObject) => {
+        return dbCalls.post(resource, newObject)
             .then(() => dbCalls.getAll(resource))
-            .then(returnObject => this.setState({[resource]: returnObject}))
-        }
-put = (resource, newObject, id) => {return dbCalls.put(resource, newObject, id)
+            .then(returnObject => this.setState({ [resource]: returnObject }))
+    }
+    put = (resource, newObject, id) => {
+        return dbCalls.put(resource, newObject, id)
             .then(() => dbCalls.getAll(resource))
-            .then(returnObject => this.setState({[resource]: returnObject}))
-        }
-patch = (resource, newObject, id) => {return dbCalls.patch(resource, newObject, id)
-    .then(() => dbCalls.getAll(resource))
-    .then(returnObject => this.setState({[resource]: returnObject}))
-}
+            .then(returnObject => this.setState({ [resource]: returnObject }))
+    }
+    patch = (resource, newObject, id) => {
+        return dbCalls.patch(resource, newObject, id)
+            .then(() => dbCalls.getAll(resource))
+            .then(returnObject => this.setState({ [resource]: returnObject }))
+    }
 
     render() {
         return (
             <React.Fragment>
-                <NavBar />
-                <h1>
-                    Hello Fig! and his newtons!
-                </h1>
+                {
+                    this.props.isSessionAuthenticated() === true &&
+                    <div className="wrapper">
+                        <NavBar />
+                        <Route exact path="/events" render={props => {
+                            return < EventsList {...props} events={this.state.events}
+                            />
+                        }}
+                        />
+                        <Route path="/events/new" render={props => {
+                            return < EventsForm post={this.post} {...props}
+                            />
+                        }}/>
+                    </div>
+
+                }
+                {
+                    this.props.isSessionAuthenticated() === false &&
+                    <Redirect to="/login" />
+                }
 
             </React.Fragment>
 
