@@ -4,6 +4,7 @@ import NavBar from "./navbar/Navbar"
 import dbCalls from "../modules/dbCalls"
 import EventsList from "./events/EventsList"
 import EventsForm from "./events/EventsForm";
+import EventsEdit from "./events/EventsEdit"
 
 export default class MainPage extends Component {
     state = {
@@ -81,6 +82,10 @@ export default class MainPage extends Component {
                         />
                         <Route path="/events/new" render={props => {
                             return < EventsForm post={this.post} {...props}
+                            />
+                        }}/>
+                        <Route path="/events/edit/:eventId(\d+)" render={props => {
+                            return < EventsEdit edit={this.edit} {...props}
                             />
                         }}/>
                     </div>

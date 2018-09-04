@@ -21,6 +21,8 @@ export default class EventsList extends Component {
                                     <p>{event.date}</p>
                                     <button className={`delete--${event.id}`} 
                                     onClick={() => this.props.delete("events", `${event.id}`)}>Delete</button>
+                                    <button className={`edit--${event.id}`}
+                                    onClick={() => this.props.history.push(`/events/edit/${event.id}`)}>Edit</button>
                                 </div>
                              </div>
 
