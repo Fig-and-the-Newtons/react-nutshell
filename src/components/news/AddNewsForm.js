@@ -8,7 +8,7 @@ export default class NewsForm extends Component {
         link: ""
     }
 
-    loadUserIDFromSS = () => {
+    getUserId = () => {
         let stringifiedUser = sessionStorage.getItem("credentials");
         let parsedUser = JSON.parse(stringifiedUser);
         return parsedUser.userNameExists.id
@@ -34,8 +34,7 @@ export default class NewsForm extends Component {
                 title: this.state.title,
                 article: this.state.article,
                 link: this.state.link,
-                userId: this.loadUserIDFromSS()
-            
+                userId: this.getUserId()
             }
 
             // Create the animal and redirect user to animal list

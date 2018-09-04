@@ -56,12 +56,12 @@ export default Object.create(null, {
     },
 
 
-    // kayla's calls 
+    ///////////// kayla's calls ///////////////////////////
     getDataByUserId: {
         value: (userId, resource) => {
             return fetch(`${remoteURL}/users/${userId}/${resource}?_sort=date&_order=asc`)
             .then(response => response.json())
         }
     }  
-    // end of Kayla's bdCalls
+    //////////// end of Kayla's bdCalls/////////////////
 })

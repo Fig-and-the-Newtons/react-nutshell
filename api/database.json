@@ -54,6 +54,27 @@
       "link": "https://github.com/Fig-and-the-Newtons/react-nutshell/projects/1",
       "userId": 4,
       "id": 8
+    },
+    {
+      "title": "User 3",
+      "article": "kfskdfn asdn j dfhsd asdfh fasdjdf sdnjkasnj hfuiasf jiadsjfasdji adijf s",
+      "link": "https://github.com/Fig-and-the-Newtons/react-nutshell/projects/1",
+      "userId": 3,
+      "id": 9
+    },
+    {
+      "title": "User 3",
+      "article": "asdfadfasd",
+      "link": "https://github.com/Fig-and-the-Newtons/react-nutshell/projects/1",
+      "userId": 3,
+      "id": 10
+    },
+    {
+      "title": "Friends",
+      "article": "kfskdfn asdn j dfhsd asdfh fasdjdf sdnjkasnj hfuiasf jiadsjfasdji adijf s",
+      "link": "https://github.com/Fig-and-the-Newtons/react-nutshell/projects/1",
+      "userId": 3,
+      "id": 11
     }
   ],
   "tasks": []

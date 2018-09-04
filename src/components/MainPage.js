@@ -16,45 +16,59 @@ export default class MainPage extends Component {
 
 
     // get user id form session storage fuction it will return the user id to wherever you call this funciton
-    loadUserIDFromSS = () => {
+        getUserId = () => {
         let stringifiedUser = sessionStorage.getItem("credentials");
         let parsedUser = JSON.parse(stringifiedUser);
         return parsedUser.userNameExists.id
      }
 
 
-    componentDidMount() {
-        const newState = {}
-
-        dbCalls.getDataByUserId(this.loadUserIDFromSS(), "news")
-        .then(allNews => {
-            newState.news = allNews
+    componentDidMount(){
+        let newState = {};
+        dbCalls.getDataByUserId(this.getUserId(), "events")
+        .then(events => {newState.events = events})
+        .then(() => dbCalls.getDataByUserId(this.getUserId(), "tasks"))
+        .then(tasks => {newState.tasks = tasks})
+        .then(() => dbCalls.getDataByUserId(this.getUserId(), "news"))
+        .then(news => {newState.news = news})
+        .then(() => dbCalls.getDataByUserId(this.getUserId(), "messages"))
+        .then(messages => {newState.messages = messages})
+        .then(() => dbCalls.getDataByUserId(this.getUserId(), "friends"))
+        .then(friends => {newState.friends = friends})
+        .then(() => {
+            this.setState(newState)
         })
-        // dbCalls.getAll("news")
-        // .then(allNews => {
-        //     newState.news = allNews
-        // })
-        dbCalls.getAll("tasks")
-        .then(allTasks => {
-            newState.tasks = allTasks
-        })
-        dbCalls.getAll("messages")
-        .then(allMessages => {
-            newState.messages = allMessages
-                   
-        })
-        dbCalls.getAll("events")
-        .then(allEvents => {
-            newState.events = allEvents
-           
-        })
-        dbCalls.getAll("friends")
-        .then(allFriends => {
-            newState.friends = allFriends
-           
-        })
-        .then(() => this.setState(newState))
     }
+
+    // componentDidMount() {
+    //     const newState = {}
+
+    //     dbCalls.getDataByUserId(this.getUserId(), "news")
+    //     .then(allNews => {
+    //         newState.news = allNews
+    //     })
+
+    //     dbCalls.getAll("tasks")
+    //     .then(allTasks => {
+    //         newState.tasks = allTasks
+    //     })
+    //     dbCalls.getAll("messages")
+    //     .then(allMessages => {
+    //         newState.messages = allMessages
+                   
+    //     })
+    //     dbCalls.getAll("events")
+    //     .then(allEvents => {
+    //         newState.events = allEvents
+           
+    //     })
+    //     dbCalls.getAll("friends")
+    //     .then(allFriends => {
+    //         newState.friends = allFriends
+           
+    //     })
+    //     .then(() => this.setState(newState))
+    // }
 
     
     delete = (resource, id) => {dbCalls.delete(resource, id)
@@ -71,15 +85,24 @@ export default class MainPage extends Component {
             .then(returnObject => this.setState({[resource]: returnObject}))
         }
     patch = (resource, newObject, id) => {return dbCalls.patch(resource, newObject, id)
-    .then(() => dbCalls.getAll(resource))
-    .then(returnObject => this.setState({[resource]: returnObject}))
-    }
-    // getNews = (userId) => {
-    //     return dbCalls.getNews(userId)
-    //     .then(() => dbCalls.getNews(resource))
-    //     .then(returnObject => this.setState({[resource]: returnObject}))
+            .then(() => dbCalls.getAll(resource))
+            .then(returnObject => this.setState({[resource]: returnObject}))
+        }
 
-    // }
+    ///////////////////////// Kayla's stuff start //////////////////////////////////////////////////////
+    post = (resource, newObject) => {return dbCalls.post(resource, newObject)
+        .then(() => dbCalls.getAll(resource))
+        .then(returnObject => this.getEverything())
+    }
+
+    getEverything = () => {
+        dbCalls.getDataByUserId(this.getUserId(), "news")
+        .then(allNews => {
+            this.setState.news = allNews
+        })
+    }
+
+    /////////////////////////// end of Kayla's stuff/////////////////////////////////////////////////////
 
     render() {
         return (
