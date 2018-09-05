@@ -38,36 +38,6 @@ export default class MainPage extends Component {
         })
     }
 
-    // componentDidMount() {
-    //     const newState = {}
-
-    //     dbCalls.getDataByUserId(this.getUserId(), "news")
-    //     .then(allNews => {
-    //         newState.news = allNews
-    //     })
-
-    //     dbCalls.getAll("tasks")
-    //     .then(allTasks => {
-    //         newState.tasks = allTasks
-    //     })
-    //     dbCalls.getAll("messages")
-    //     .then(allMessages => {
-    //         newState.messages = allMessages
-                   
-    //     })
-    //     dbCalls.getAll("events")
-    //     .then(allEvents => {
-    //         newState.events = allEvents
-           
-    //     })
-    //     dbCalls.getAll("friends")
-    //     .then(allFriends => {
-    //         newState.friends = allFriends
-           
-    //     })
-    //     .then(() => this.setState(newState))
-    // }
-
     
     delete = (resource, id) => {dbCalls.delete(resource, id)
             .then(() => dbCalls.getDataByUserId(this.state.user.id, resource))
@@ -87,12 +57,6 @@ export default class MainPage extends Component {
             .then(returnObject => this.setState({[resource]: returnObject}))
         }
 
-    ///////////////////////// Kayla's stuff start //////////////////////////////////////////////////////
-
-    // Logout function 
-    
-
-    /////////////////////////// end of Kayla's stuff/////////////////////////////////////////////////////
 
     render() {
        console.log("mainPage")
