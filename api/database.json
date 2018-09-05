@@ -11,13 +11,43 @@
       "id": 2
     },
     {
+      "userName": "Figamus",
+      "password": "12345",
+      "id": 3
+    },
+    {
       "userName": "thatmikeparrish",
       "password": "test",
-      "id": 3
+      "id": 4
     }
   ],
   "friends": [],
-  "messages": [],
+  "messages": [
+    {
+      "userId": 1,
+      "message": "Fancy Fancy2",
+      "date": 1536162285674,
+      "id": 14
+    },
+    {
+      "userId": 1,
+      "message": "aaaaaaa",
+      "date": 1536162590174,
+      "id": 15
+    },
+    {
+      "userId": 1,
+      "message": "dsasdg",
+      "date": 1536164810995,
+      "id": 16
+    },
+    {
+      "userId": 1,
+      "message": "erfegeg",
+      "date": 1536173519506,
+      "id": 17
+    }
+  ],
   "events": [],
   "news": [],
   "tasks": [

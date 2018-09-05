@@ -4,6 +4,8 @@ import NavBar from "./navbar/Navbar"
 import TaskList from './tasks/TaskList'
 import TaskForm from './tasks/TaskForm'
 import dbCalls from "../modules/dbCalls"
+import MessagesList from "./messages/MessagesList"
+import MessagesEdit from "./messages/MessagesEdit"
 
 export default class MainPage extends Component {
     state = {
@@ -28,17 +30,14 @@ export default class MainPage extends Component {
         dbCalls.getAll("messages")
         .then(allMessages => {
             newState.messages = allMessages
-                   
         })
         dbCalls.getAll("events")
         .then(allEvents => {
             newState.events = allEvents
-           
         })
         dbCalls.getAll("friends")
         .then(allFriends => {
             newState.friends = allFriends
-           
         })
         .then(() => this.setState(newState))
     }
@@ -69,6 +68,20 @@ export default class MainPage extends Component {
                     this.props.isSessionAuthenticated() === true &&
                     <div className="wrapper">
                         <NavBar />
+                        <h1>Hello Fig! and his newtons!</h1>
+                        <Route exact path="/messages" render={(props) => {
+                            return <MessagesList {...props}
+                            messages={this.state.messages}
+                            delete={this.delete}
+                            post={this.post}
+                            patch={this.patch}
+                            get={this.get} />
+                        }} />
+                        <Route exact path="/messages/edit/:messageId(\d+)" render={(props) => {
+                            return <MessagesEdit {...props}
+                            patch={this.patch}
+                            messages={this.state.messages} />
+                        }} />
                         <Route exact path="/tasks" render={(props) => {
                             return <TaskList {...props} delete={this.delete} patch={this.patch} tasks={this.state.tasks}/>
                         }} />
@@ -76,7 +89,6 @@ export default class MainPage extends Component {
                             return <TaskForm {...props} post={this.post} tasks={this.state.tasks} />
                         }} />
                     </div>
-
                 }
                 {
                     this.props.isSessionAuthenticated() === false &&
