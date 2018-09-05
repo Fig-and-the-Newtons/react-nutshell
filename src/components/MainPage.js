@@ -38,7 +38,6 @@ export default class MainPage extends Component {
         })
     }
 
-    
     delete = (resource, id) => {dbCalls.delete(resource, id)
             .then(() => dbCalls.getDataByUserId(this.state.user.id, resource))
             .then(returnObject => this.setState({[resource]: returnObject}))
