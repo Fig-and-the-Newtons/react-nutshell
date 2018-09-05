@@ -1,0 +1,16 @@
+.taskTitle {
+    margin: 2rem 0 2rem 0;
+}
+
+.taskTile {
+    min-height: 3rem;
+}
+
+.taskBtn {
+    width: 5.5rem;
+}
+
+.taskCard {
+    min-height: 10rem;
+    min-width: 60rem;
+}

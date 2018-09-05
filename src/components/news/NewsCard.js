@@ -4,11 +4,11 @@ import React, { Component } from "react"
 export default class NewsCard extends Component {
     render() {
         return (
-            <div key={this.props.news.id} className="card">
+            <div className="card">
                 <div className="card-body">
                     <div className="card-title">
         
-                        <div key={this.props.news.id}>
+                        <div>
                             <h3>{this.props.news.title}</h3>
                             <p>{this.props.news.article}</p>
                             <a href={this.props.news.link}>Read More</a>
