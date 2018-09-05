@@ -32,7 +32,7 @@ export default class MainPage extends Component {
         .then(tasks => {newState.tasks = tasks})
         .then(() => dbCalls.getDataByUserId(this.getUserId(), "news"))
         .then(news => {newState.news = news})
-        .then(() => dbCalls.getDataByUserId(this.getUserId(), "messages"))
+        .then(() => dbCalls.getAll("messages"))
         .then(messages => {newState.messages = messages})
         .then(() => dbCalls.getDataByUserId(this.getUserId(), "friends"))
         .then(friends => {newState.friends = friends})
