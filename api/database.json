@@ -9,77 +9,50 @@
       "userName": "kayla",
       "password": "kayla",
       "id": 2
-    },
-    {
-      "userName": "Figamus",
-      "password": "12345",
-      "id": 3
-    },
-    {
-      "userName": "thatmikeparrish",
-      "password": "test",
-      "id": 4
     }
   ],
   "friends": [],
   "messages": [
     {
       "userId": 1,
-      "message": "Fancy Fancy2",
-      "date": 1536162285674,
-      "id": 14
-    },
-    {
-      "userId": 1,
-      "message": "aaaaaaa",
-      "date": 1536162590174,
-      "id": 15
-    },
-    {
-      "userId": 1,
-      "message": "dsasdg",
-      "date": 1536164810995,
-      "id": 16
-    },
-    {
-      "userId": 1,
-      "message": "erfegeg",
-      "date": 1536173519506,
-      "id": 17
+      "message": "heloo",
+      "date": 1536180156037,
+      "id": 1
     }
   ],
-  "events": [],
-  "news": [],
-  "tasks": [
+  "events": [
     {
-      "completionDate": "9/4/18",
-      "title": "Complete adding tasks",
-      "completed": true,
-      "id": 1
-    },
-    {
-      "completionDate": "9/6/18",
-      "title": "style the hell out of tasks",
-      "completed": false,
-      "id": 2
-    },
-    {
-      "completionDate": "9/14/18",
-      "title": "drive",
-      "completed": true,
+      "name": "Kuma",
+      "location": "Tampa",
+      "date": "2018-09-13",
       "id": 3
     },
     {
-      "completionDate": "8/1/2018",
-      "title": "This should be auto false",
-      "completed": false,
-      "id": 4
+      "name": "Practicing my crud skills",
+      "location": "Things to do",
+      "date": "2018-09-22",
+      "id": 7
     },
     {
-      "completionDate": "10/18/2018",
-      "title": "heyo random stuff whats up words trying make a long task that has a lot of words or letters to see if it wraps and does what I want it to do, holy run on sentence batman",
+      "name": "new event man",
+      "location": "checking checking",
+      "date": "2018-09-28",
+      "id": 11
+    }
+  ],
+  "news": [],
+  "tasks": [
+    {
+      "completionDate": "fff",
+      "title": "fff",
       "completed": false,
-      "id": 5
+      "id": 1
+    },
+    {
+      "completionDate": "new one",
+      "title": "one",
+      "completed": true,
+      "id": 2
     }
   ]
 }
