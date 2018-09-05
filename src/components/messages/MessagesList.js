@@ -35,7 +35,10 @@ export default class MessagesList extends Component {
                                         {messageObject.userId}
                                     </h5>
                                     <p className="message-text">{messageObject.message}</p>
-                                    <button onClick={() => this.props.delete("messages", messageObject.id)} className="card-link">Delete</button>
+                                    <button onClick={() => this.props.delete("messages", messageObject.id)} className="card-link btn btn-success">Delete</button>
+                                    <button type="button"className="btn btn-success" onClick={() => {
+                                        this.props.history.push(`/messages/edit/${messageObject.id}`)}
+                                    }>Edit</button>
                                 </div>
                             </div>
                         )

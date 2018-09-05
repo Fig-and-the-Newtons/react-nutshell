@@ -3,6 +3,7 @@ import React, { Component } from "react"
 import NavBar from "./navbar/Navbar"
 import dbCalls from "../modules/dbCalls"
 import MessagesList from "./messages/MessagesList"
+import MessagesEdit from "./messages/MessagesEdit"
 
 export default class MainPage extends Component {
     state = {
@@ -72,6 +73,11 @@ patch = (resource, newObject, id) => {return dbCalls.patch(resource, newObject, 
                         post={this.post}
                         patch={this.patch}
                         get={this.get} />
+                        }} />
+                    <Route exact path="/messages/edit/:messageId(\d+)" render={(props) => {
+                        return <MessagesEdit {...props}
+                        patch={this.patch}
+                        messages={this.state.messages} />
                         }} />
                     </div>
                 }

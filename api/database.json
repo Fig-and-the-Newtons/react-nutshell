@@ -19,22 +19,28 @@
   "friends": [],
   "messages": [
     {
-      "userId": "1",
-      "message": "A ThirdTesting Thingy",
-      "date": 2435236545237,
-      "id": 3
-    },
-    {
       "userId": 1,
-      "message": "try again",
+      "message": "Fancy Fancy2",
       "date": 1536162285674,
       "id": 14
     },
     {
       "userId": 1,
-      "message": "dfasf",
+      "message": "aaaaaaa",
       "date": 1536162590174,
       "id": 15
+    },
+    {
+      "userId": 1,
+      "message": "dsasdg",
+      "date": 1536164810995,
+      "id": 16
+    },
+    {
+      "userId": 1,
+      "message": "erfegeg",
+      "date": 1536173519506,
+      "id": 17
     }
   ],
   "events": [],
