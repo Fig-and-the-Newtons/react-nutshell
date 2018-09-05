@@ -65,7 +65,6 @@ export default class MainPage extends Component {
     render() {
         return (
             <React.Fragment>
-
                 {
                     this.props.isSessionAuthenticated() === true &&
                     <div className="wrapper">
