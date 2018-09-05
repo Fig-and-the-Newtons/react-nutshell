@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import "./Messages.css"
 
 export default class MessagesList extends Component {
     state = {
@@ -22,6 +23,7 @@ export default class MessagesList extends Component {
     render () {
         return (
             <React.Fragment>
+                <div id="messagesContainer">
                 <div id="messageTitle">
                     <h3>Messages</h3>
                 </div>
@@ -50,6 +52,7 @@ export default class MessagesList extends Component {
                         this.props.post("messages", this.state)
                         .then(this.handleSubmit)
                     }}>Post Message</button>
+                </div>
             </React.Fragment>
         )
     }
