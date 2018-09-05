@@ -1,7 +1,9 @@
-// import { Route, Redirect } from 'react-router-dom'
+import { Route, Redirect } from 'react-router-dom'
 import React, { Component } from "react"
 import NavBar from "./navbar/Navbar"
 import dbCalls from "../modules/dbCalls"
+import MessagesList from "./messages/MessagesList"
+import MessagesEdit from "./messages/MessagesEdit"
 
 export default class MainPage extends Component {
     state = {
@@ -26,27 +28,23 @@ export default class MainPage extends Component {
         dbCalls.getAll("messages")
         .then(allMessages => {
             newState.messages = allMessages
-                   
         })
         dbCalls.getAll("events")
         .then(allEvents => {
             newState.events = allEvents
-           
         })
         dbCalls.getAll("friends")
         .then(allFriends => {
             newState.friends = allFriends
-           
         })
         .then(() => this.setState(newState))
     }
 
-    
+get = (resource, id) => {dbCalls.get(resource, id)}
 delete = (resource, id) => {dbCalls.delete(resource, id)
             .then(() => dbCalls.getAll(resource))
             .then(returnObject => this.setState({[resource]: returnObject}))
         }
-
 post = (resource, newObject) => {return dbCalls.post(resource, newObject)
             .then(() => dbCalls.getAll(resource))
             .then(returnObject => this.setState({[resource]: returnObject}))
@@ -63,11 +61,30 @@ patch = (resource, newObject, id) => {return dbCalls.patch(resource, newObject, 
     render() {
         return (
             <React.Fragment>
-                <NavBar />
-                <h1>
-                    Hello Fig! and his newtons!
-                </h1>
-
+                {
+                    this.props.isSessionAuthenticated() === true &&
+                    <div className="wrapper">
+                    <NavBar />
+                    <h1>Hello Fig! and his newtons!</h1>
+                    <Route exact path="/messages" render={(props) => {
+                        return <MessagesList {...props}
+                        messages={this.state.messages}
+                        delete={this.delete}
+                        post={this.post}
+                        patch={this.patch}
+                        get={this.get} />
+                        }} />
+                    <Route exact path="/messages/edit/:messageId(\d+)" render={(props) => {
+                        return <MessagesEdit {...props}
+                        patch={this.patch}
+                        messages={this.state.messages} />
+                        }} />
+                    </div>
+                }
+                {
+                    this.props.isSessionAuthenticated() === false &&
+                    <Redirect to="/login" />
+                }
             </React.Fragment>
 
         )
