@@ -23,13 +23,13 @@ export default class EventsEdit extends Component {
             location: this.state.location,
             date: this.state.date
         }
-        const correctEventId = parseInt(this.props.match.params.eventId);
+        const correctEventId = parseInt(this.props.match.params.eventId, 0);
 
         this.props.patch("events", updatedEvent, correctEventId).then(() => this.props.history.push("/events"))
 
     }
     componentDidMount(){
-        const event = this.props.events.find(a => a.id === parseInt(this.props.match.params.eventId)) || {}
+        const event = this.props.events.find(a => a.id === parseInt(this.props.match.params.eventId, 0)) || {}
         this.setState(event)
 
 
@@ -46,7 +46,7 @@ export default class EventsEdit extends Component {
                            className="form-control"
                            onChange={this.handleFieldChange}
                            id="name"
-                           placeholder="Animal name"
+                           placeholder="Event name"
                            defaultValue={this.state.name} />
                 </div>
                 <div className="form-group">
