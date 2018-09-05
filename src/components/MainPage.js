@@ -110,7 +110,7 @@ export default class MainPage extends Component {
                         }} />
                         <Route exact path="/messages/edit/:messageId(\d+)" render={(props) => {
                             return <MessagesEdit {...props}
-                            patch={this.patch}
+                            patch={this.patchMessage}
                             messages={this.state.messages} />
                         }} />
                         <Route exact path="/tasks" render={(props) => {
