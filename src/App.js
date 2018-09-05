@@ -4,26 +4,32 @@ import Login from "./components/login/Login"
 import './App.css';
 import MainPage from './components/MainPage';
 
+
 export default class App extends Component {
-  isSessionAuthenticated = () => sessionStorage.getItem("credentials") !== null;
+    state = {
+        login: true
+    }
+    
+    handleLogout = () => {
+        sessionStorage.removeItem("user");
+        this.setState({login: false})
+    }
 
-  render() {
-
-
-    return (
-      <React.Fragment>
-
-          {
-              this.isSessionAuthenticated() === false && 
-              <Route exact path="/login" render={(props) => {
-                  return <Login {...props} />
-              }} />
-          }
-          {
-              <MainPage isSessionAuthenticated={this.isSessionAuthenticated} />
-          }
-
-      </React.Fragment>
-    )
-  }
+    isAuthenticated = () => sessionStorage.getItem("user") !== null
+    
+    render() {
+        return (
+            <React.Fragment>
+                {
+                    !this.isAuthenticated() &&
+                    <Route exact path="/login" render={(props) => {
+                        return <Login {...props} />
+                    }} />
+                }
+                {
+                    <MainPage isAuthenticated={this.isAuthenticated} handleLogout={this.handleLogout} />
+                }
+            </React.Fragment>
+        )
+    }
 }
