@@ -12,7 +12,14 @@
     }
   ],
   "friends": [],
-  "messages": [],
+  "messages": [
+    {
+      "userId": 1,
+      "message": "heloo",
+      "date": 1536180156037,
+      "id": 1
+    }
+  ],
   "events": [
     {
       "name": "Kuma",
@@ -27,12 +34,25 @@
       "id": 7
     },
     {
-      "name": "I love going to events",
-      "location": "tampa",
-      "date": "2018-09-09",
-      "id": 10
+      "name": "new event man",
+      "location": "checking checking",
+      "date": "2018-09-28",
+      "id": 11
     }
   ],
   "news": [],
-  "tasks": []
+  "tasks": [
+    {
+      "completionDate": "fff",
+      "title": "fff",
+      "completed": false,
+      "id": 1
+    },
+    {
+      "completionDate": "new one",
+      "title": "one",
+      "completed": true,
+      "id": 2
+    }
+  ]
 }

@@ -1,10 +1,14 @@
 import { Route, Redirect } from 'react-router-dom'
 import React, { Component } from "react"
 import NavBar from "./navbar/Navbar"
+import TaskList from './tasks/TaskList'
+import TaskForm from './tasks/TaskForm'
 import dbCalls from "../modules/dbCalls"
 import EventsList from "./events/EventsList"
 import EventsForm from "./events/EventsForm";
 import EventsEdit from "./events/EventsEdit"
+import MessagesList from "./messages/MessagesList"
+import MessagesEdit from "./messages/MessagesEdit"
 
 export default class MainPage extends Component {
     state = {
@@ -27,44 +31,37 @@ export default class MainPage extends Component {
                 newState.tasks = allTasks
             })
         dbCalls.getAll("messages")
-            .then(allMessages => {
-                newState.messages = allMessages
-
-            })
+        .then(allMessages => {
+            newState.messages = allMessages
+        })
         dbCalls.getAll("events")
-            .then(allEvents => {
-                newState.events = allEvents
-
-            })
+        .then(allEvents => {
+            newState.events = allEvents
+        })
         dbCalls.getAll("friends")
-            .then(allFriends => {
-                newState.friends = allFriends
-
-            })
-            .then(() => this.setState(newState))
+        .then(allFriends => {
+            newState.friends = allFriends
+        })
+        .then(() => this.setState(newState))
     }
 
+    
+    delete = (resource, id) => {dbCalls.delete(resource, id)
+                .then(() => dbCalls.getAll(resource))
+                .then(returnObject => this.setState({[resource]: returnObject}))
+            }
 
-    delete = (resource, id) => {
-        dbCalls.delete(resource, id)
-        .then(() => dbCalls.getAll(resource))
-        .then(returnObject => this.setState({ [resource]: returnObject }))
-    }
-
-    post = (resource, newObject) => {
-        return dbCalls.post(resource, newObject)
-            .then(() => dbCalls.getAll(resource))
-            .then(returnObject => this.setState({ [resource]: returnObject }))
-    }
-    put = (resource, newObject, id) => {
-        return dbCalls.put(resource, newObject, id)
-            .then(() => dbCalls.getAll(resource))
-            .then(returnObject => this.setState({ [resource]: returnObject }))
-    }
-    patch = (resource, newObject, id) => {
-        return dbCalls.patch(resource, newObject, id)
-            .then(() => dbCalls.getAll(resource))
-            .then(returnObject => this.setState({ [resource]: returnObject }))
+    post = (resource, newObject) => {return dbCalls.post(resource, newObject)
+                .then(() => dbCalls.getAll(resource))
+                .then(returnObject => this.setState({[resource]: returnObject}))
+            }
+    put = (resource, newObject, id) => {return dbCalls.put(resource, newObject, id)
+                .then(() => dbCalls.getAll(resource))
+                .then(returnObject => this.setState({[resource]: returnObject}))
+            }
+    patch = (resource, newObject, id) => {return dbCalls.patch(resource, newObject, id)
+                .then(() => dbCalls.getAll(resource))
+                .then(returnObject => this.setState({[resource]: returnObject}))
     }
 
     render() {
@@ -74,6 +71,7 @@ export default class MainPage extends Component {
                     this.props.isSessionAuthenticated() === true &&
                     <div className="wrapper">
                         <NavBar />
+                        <h1>Hello Fig! and his newtons!</h1>
                         <Route exact path="/events" render={props => {
                             return < EventsList {...props} events={this.state.events}
                                                 delete={this.delete}
@@ -89,6 +87,25 @@ export default class MainPage extends Component {
                                         events={this.state.events}
                             />
                         }}/>
+                        <Route exact path="/messages" render={(props) => {
+                            return <MessagesList {...props}
+                            messages={this.state.messages}
+                            delete={this.delete}
+                            post={this.post}
+                            patch={this.patch}
+                            get={this.get} />
+                        }} />
+                        <Route exact path="/messages/edit/:messageId(\d+)" render={(props) => {
+                            return <MessagesEdit {...props}
+                            patch={this.patch}
+                            messages={this.state.messages} />
+                        }} />
+                        <Route exact path="/tasks" render={(props) => {
+                            return <TaskList {...props} delete={this.delete} patch={this.patch} tasks={this.state.tasks}/>
+                        }} />
+                        <Route exact path="/tasks/new" render={(props) => {
+                            return <TaskForm {...props} post={this.post} tasks={this.state.tasks} />
+                        }} />
                     </div>
 
                 }
