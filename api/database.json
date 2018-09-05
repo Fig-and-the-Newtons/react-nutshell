@@ -15,34 +15,28 @@
   "messages": [],
   "events": [
     {
-      "name": "newest one",
-      "location": "ye yayay",
-      "date": "2018-09-12",
+      "name": "Kuma",
+      "location": "Tampa",
+      "date": "2018-09-13",
       "id": 3
     },
     {
-      "name": "hey ",
-      "location": "guys",
-      "date": "2018-09-14",
+      "name": "I hope we can get the user ID working",
+      "location": "lebanon",
+      "date": "2018-09-09",
       "id": 4
     },
     {
-      "name": "sup dude ",
-      "location": "fff",
-      "date": "2018-09-21",
-      "id": 6
-    },
-    {
       "name": "Practicing my crud skills",
-      "location": "Nashville",
-      "date": "2018-09-21",
+      "location": "Things to do",
+      "date": "2018-09-03",
       "id": 7
     },
     {
-      "name": "Hey Guys I love nutshell",
-      "location": "East Nash",
-      "date": "2018-09-19",
-      "id": 8
+      "name": "Think I finished it up",
+      "location": "Mt.juliet",
+      "date": "2018-09-16",
+      "id": 9
     }
   ],
   "news": [],

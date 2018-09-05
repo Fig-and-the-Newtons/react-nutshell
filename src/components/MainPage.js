@@ -85,7 +85,8 @@ export default class MainPage extends Component {
                             />
                         }}/>
                         <Route path="/events/edit/:eventId(\d+)" render={props => {
-                            return < EventsEdit edit={this.edit} {...props}
+                            return < EventsEdit patch={this.patch} {...props}
+                                        events={this.state.events}
                             />
                         }}/>
                     </div>
