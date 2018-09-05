@@ -9,10 +9,34 @@
       "userName": "kayla",
       "password": "kayla",
       "id": 2
+    },
+    {
+      "userName": "Figamus",
+      "password": "12345",
+      "id": 3
     }
   ],
   "friends": [],
-  "messages": [],
+  "messages": [
+    {
+      "userId": "1",
+      "message": "A ThirdTesting Thingy",
+      "date": 2435236545237,
+      "id": 3
+    },
+    {
+      "userId": 1,
+      "message": "try again",
+      "date": 1536162285674,
+      "id": 14
+    },
+    {
+      "userId": 1,
+      "message": "dfasf",
+      "date": 1536162590174,
+      "id": 15
+    }
+  ],
   "events": [],
   "news": [],
   "tasks": []
