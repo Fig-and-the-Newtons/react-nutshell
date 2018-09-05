@@ -1,12 +1,10 @@
-import { Route, Redirect } from 'react-router-dom'
+import { Route } from 'react-router-dom'
 import React, { Component } from "react"
-import NavBar from "./navbar/Navbar"
 import TaskList from './tasks/TaskList'
 import TaskForm from './tasks/TaskForm'
 import dbCalls from "../modules/dbCalls"
 import NewsList from "./news/NewsList"
 import AddNewsForm from "./news/AddNewsForm"
-import MainList from "./main/MainList"
 import EventsList from "./events/EventsList"
 import EventsForm from "./events/EventsForm";
 import EventsEdit from "./events/EventsEdit"
@@ -43,6 +41,22 @@ export default class MainPage extends Component {
         })
     }
 
+    postMessage = (resource, newObject) => {return dbCalls.post(resource, newObject)
+        .then(() => dbCalls.getAll(resource))
+        .then(returnObject => this.setState({[resource]: returnObject}))
+    }
+    deleteMessage = (resource, id) => {dbCalls.delete(resource, id)
+            .then(() => dbCalls.getAll(resource))
+            .then(returnObject => this.setState({[resource]: returnObject}))
+    }
+    patchMessage = (resource, newObject, id) => {return dbCalls.patch(resource, newObject, id)
+        .then(() => dbCalls.getAll(resource))
+        .then(returnObject => this.setState({[resource]: returnObject}))
+    }
+    postMessage = (resource, newObject) => {return dbCalls.post(resource, newObject)
+        .then(() => dbCalls.getAll(resource))
+        .then(returnObject => this.setState({[resource]: returnObject}))
+    }
     delete = (resource, id) => {dbCalls.delete(resource, id)
             .then(() => dbCalls.getDataByUserId(this.state.user.id, resource))
             .then(returnObject => this.setState({[resource]: returnObject}))
@@ -62,18 +76,13 @@ export default class MainPage extends Component {
         }
 
 
+
     render() {
         console.log("mainPage")
         return (
             <React.Fragment>
-                {
-                    this.props.isAuthenticated() &&
                     <div className="wrapper">
-                        <NavBar handleLogout={this.props.handleLogout}/>
                         <h1>Hello Fig! and his newtons!</h1>
-                        <Route exact path="/" render={(props) => {
-                            return <MainList {...props} />
-                        }} />
                         <Route exact path="/news" render={(props) => {
                                 return <NewsList {...props} allNews={this.state.news} delete={this.delete} />
                         }} />
@@ -94,9 +103,9 @@ export default class MainPage extends Component {
                         <Route exact path="/messages" render={(props) => {
                             return <MessagesList {...props}
                             messages={this.state.messages}
-                            delete={this.delete}
-                            post={this.post}
-                            patch={this.patch}
+                            delete={this.deleteMessage}
+                            post={this.postMessage}
+                            patch={this.patchMessage}
                             get={this.get} />
                         }} />
                         <Route exact path="/messages/edit/:messageId(\d+)" render={(props) => {
@@ -111,11 +120,6 @@ export default class MainPage extends Component {
                             return <TaskForm {...props} post={this.post} tasks={this.state.tasks} />
                         }} />
                     </div>
-                }
-                {
-                    !this.props.isAuthenticated() &&
-                    <Redirect to="/login" />
-                }
             </React.Fragment>
         )
     }

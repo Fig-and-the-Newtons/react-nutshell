@@ -20,14 +20,14 @@ export default class Login extends Component {
             let userNameExists = users.find(u => u.userName === this.state.userName);
             if(userNameExists){
                 sessionStorage.setItem("user", JSON.stringify(userNameExists))
-                this.props.history.push("/")
+                this.props.history.push("/news")
             } else {  
                 dbCalls.post("users", {userName: this.state.userName, password: this.state.password})
                 .then(() => dbCalls.getAll("users"))
                 .then(users => {
                     userNameExists = users.find(u => u.userName === this.state.userName);
                     sessionStorage.setItem("user", JSON.stringify(userNameExists))
-                    this.props.history.push("/")
+                    this.props.history.push("/news")
                 })
             }
         })

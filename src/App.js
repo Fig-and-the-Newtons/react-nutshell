@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { Route } from 'react-router-dom'
 import Login from "./components/login/Login"
 import './App.css';
-import MainPage from './components/MainPage';
+import ApplicationViews from "./components/ApplicationViews";
+
 
 
 export default class App extends Component {
@@ -27,7 +28,7 @@ export default class App extends Component {
                     }} />
                 }
                 {
-                    <MainPage isAuthenticated={this.isAuthenticated} handleLogout={this.handleLogout} />
+                    <ApplicationViews isAuthenticated={this.isAuthenticated} handleLogout={this.handleLogout} />
                 }
             </React.Fragment>
         )
