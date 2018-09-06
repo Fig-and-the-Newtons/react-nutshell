@@ -71,13 +71,6 @@
       "id": 7
     },
     {
-      "name": "newest event",
-      "location": "yoooooo",
-      "date": "2018-09-18",
-      "userId": 1,
-      "id": 9
-    },
-    {
       "name": "I love going to events",
       "location": "Nash",
       "date": "2018-10-01",
@@ -90,6 +83,20 @@
       "date": "2018-09-22",
       "userId": 2,
       "id": 11
+    },
+    {
+      "name": "another card",
+      "location": "Nashville",
+      "date": "2018-09-13",
+      "userId": 1,
+      "id": 12
+    },
+    {
+      "name": " ID working",
+      "location": "Tampa",
+      "date": "2018-09-11",
+      "userId": 1,
+      "id": 13
     }
   ],
   "news": [
