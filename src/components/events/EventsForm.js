@@ -22,7 +22,8 @@ export default class EventsForm extends Component {
             const newObject = {
                 name: this.state.name,
                 location: this.state.location,
-                date: this.state.date
+                date: this.state.date,
+                userId: this.props.user.id
             }
             this.props.post("events", newObject).then(() => this.props.history.push("/events"))
         }

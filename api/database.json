@@ -35,9 +35,63 @@
       "message": "sdfgsdf dfgsfhfgdhdghdfghdgfhdgf",
       "date": 1536185042186,
       "id": 3
+    },
+    {
+      "userId": 1,
+      "message": "yoyoyoy",
+      "date": 1536246117058,
+      "id": 4
     }
   ],
-  "events": [],
+  "events": [
+    {
+      "name": "New Event for the Figs",
+      "location": "Things to do",
+      "date": "2018-09-27",
+      "id": 1,
+      "userId": 1
+    },
+    {
+      "name": "I love going to events",
+      "location": "this one is it big boy",
+      "date": "2018-12-04",
+      "id": 4,
+      "userId": 1
+    },
+    {
+      "name": "new for the User",
+      "location": "user",
+      "date": "2018-09-17",
+      "id": 5
+    },
+    {
+      "name": "maybemaybe",
+      "location": "llff",
+      "date": "2018-09-17",
+      "id": 7
+    },
+    {
+      "name": "newest event",
+      "location": "yoooooo",
+      "date": "2018-09-18",
+      "userId": 1,
+      "id": 9
+    },
+    {
+      "name": "I love going to events",
+      "location": "Nash",
+      "date": "2018-10-01",
+      "userId": 2,
+      "id": 10
+    },
+    {
+      "name": "meetups",
+      "location": "Nss",
+      "date": "2018-09-22",
+      "userId": 2,
+      "id": 11
+    }
+  ],
   "news": [
     {
       "title": "User 2",
@@ -66,7 +120,21 @@
       "link": "https://github.com/Fig-and-the-Newtons/react-nutshell/projects/1",
       "userId": 3,
       "id": 8
+    },
+    {
+      "title": "Big Peaches",
+      "article": "in Georgia",
+      "link": "www.google.com",
+      "userId": 2,
+      "id": 9
     }
   ],
-  "tasks": []
+  "tasks": [
+    {
+      "completionDate": "Go to grocery",
+      "title": "Big Wednesday",
+      "completed": false,
+      "id": 1
+    }
+  ]
 }

@@ -95,10 +95,12 @@ export default class MainPage extends Component {
                         }} />
                         <Route exact path="/events" render={props => {
                             return < EventsList {...props} events={this.state.events}
-                                                delete={this.delete} />
+                                                delete={this.delete} 
+                                                user={this.state.user} />
                         }} />
                         <Route path="/events/new" render={props => {
-                            return < EventsForm post={this.post} {...props} />
+                            return < EventsForm post={this.post} {...props} 
+                            user={this.state.user}/>
                         }} />
                         <Route path="/events/edit/:eventId(\d+)" render={props => {
                             return < EventsEdit patch={this.patch} {...props}
