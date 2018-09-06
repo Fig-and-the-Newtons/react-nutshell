@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import NewsCard from "./NewsCard"
 
+
 export default class NewsList extends Component {
     
     render () {
