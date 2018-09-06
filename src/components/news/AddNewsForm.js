@@ -1,43 +1,33 @@
 import React, { Component } from "react"
 
 export default class NewsForm extends Component {
-    // Set initial state
+
     state = {
         title: "",
         article: "",
         link: ""
     }
 
-    getUserId = () => {
-        let stringifiedUser = sessionStorage.getItem("credentials");
-        let parsedUser = JSON.parse(stringifiedUser);
-        return parsedUser.userNameExists.id
-     }
 
-    // Update state whenever an input field is edited
     handleFieldChange = evt => {
         const stateToChange = {}
         stateToChange[evt.target.id] = evt.target.value
         this.setState(stateToChange)
     }
 
-    /*
-        Local method for validation, creating animal object, and
-        invoking the function reference passed from parent component
-     */
+
     constructNewArticle = evt => {
         evt.preventDefault()
-        if (this.state.name === "" || this.state.article === "") {
-            window.alert("Please fill out all fields")
+        if (this.state.name === "" || this.state.article === "" || this.state.link === "") {
+            alert("Please fill out all fields")
         } else {
             const article = {
                 title: this.state.title,
                 article: this.state.article,
                 link: this.state.link,
-                userId: this.getUserId()
+                userId: this.props.user.id
             }
 
-            // Create the animal and redirect user to animal list
             this.props.post("news", article).then(() => this.props.history.push("/news"))
         }
     }

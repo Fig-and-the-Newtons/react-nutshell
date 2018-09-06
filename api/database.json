@@ -32,7 +32,7 @@
     },
     {
       "userId": 1,
-      "message": "sdfgsdf",
+      "message": "sdfgsdf dfgsfhfgdhdghdfghdgfhdgf",
       "date": 1536185042186,
       "id": 3
     }
@@ -41,45 +41,31 @@
   "news": [
     {
       "title": "User 2",
-      "article": "kfskdfn asdn j dfhsd asdfh fasdjdf sdnjkasnj hfuiasf jiadsjfasdji adijf s",
+      "article": "1",
       "link": "https://github.com/Fig-and-the-Newtons/react-nutshell/projects/1",
       "userId": 2,
       "id": 4
     },
     {
-      "title": "User 3",
-      "article": "asdfadfasd",
-      "link": "https://github.com/Fig-and-the-Newtons/react-nutshell/projects/1",
-      "userId": 3,
-      "id": 5
-    },
-    {
-      "title": "User 3",
-      "article": "kfskdfn asdn j dfhsd asdfh fasdjdf sdnjkasnj hfuiasf jiadsjfasdji adijf s",
+      "title": "User 3.5",
+      "article": "2",
       "link": "https://github.com/Fig-and-the-Newtons/react-nutshell/projects/1",
       "userId": 3,
       "id": 6
     },
     {
       "title": "User 3",
-      "article": "kfskdfn asdn j dfhsd asdfh fasdjdf sdnjkasnj hfuiasf jiadsjfasdji adijf s",
+      "article": "3",
       "link": "https://github.com/Fig-and-the-Newtons/react-nutshell/projects/1",
       "userId": 3,
       "id": 7
     },
     {
-      "title": "User 3",
-      "article": "kfskdfn asdn j dfhsd asdfh fasdjdf sdnjkasnj hfuiasf jiadsjfasdji adijf s",
+      "title": "Friends",
+      "article": "Hello",
       "link": "https://github.com/Fig-and-the-Newtons/react-nutshell/projects/1",
       "userId": 3,
-      "id": 9
-    },
-    {
-      "title": "User 3",
-      "article": "asdfadfasd",
-      "link": "https://github.com/Fig-and-the-Newtons/react-nutshell/projects/1",
-      "userId": 3,
-      "id": 10
+      "id": 8
     }
   ],
   "tasks": []

@@ -2,23 +2,24 @@ import React, { Component } from "react"
 // import { Link } from "react-router-dom"
 
 export default class NewsCard extends Component {
+    deleteArticle = () => {
+        this.props.delete("news", this.props.news.id)
+    }
+
     render() {
         return (
             <div className="card">
                 <div className="card-body">
                     <div className="card-title">
-        
                         <div>
                             <h3>{this.props.news.title}</h3>
                             <p>{this.props.news.article}</p>
                             <a href={this.props.news.link}>Read More</a>
                         </div>
-                
-                        {/* <button onClick={() => this.props.deletenews(this.props.news)
-                            .then(() => this.props.history.push('/newss'))}
-                            className="card-link">Release</button> */}
-                        {/* <Link className="nav-link" to={`/newss/${this.props.news.id}`}>Details</Link>
-                        <Link className="nav-link" to={`/newss/edit/${this.props.news.id}`}>Edit</Link> */}
+                        <button onClick={this.deleteArticle}
+                            className="card-link">Delete</button> 
+                        <button onClick={() => this.props.history.push(`/news/edit/${this.props.news.id}`)}
+                            className="card-link">Edit</button> 
                     </div>
                 </div>
             </div>

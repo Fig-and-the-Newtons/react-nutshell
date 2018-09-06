@@ -15,10 +15,8 @@ export default class NewsList extends Component {
                 <section className="news">
                 {
                     this.props.allNews.map(news => {
-                        console.log("i got here");
                         return <NewsCard key={news.id} news={news} {...this.props} />
-                    }
-                    )
+                    })
                 }
                 </section>
             </React.Fragment>
