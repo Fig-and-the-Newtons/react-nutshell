@@ -15,6 +15,7 @@ export default class NewsCard extends Component {
                             <h3>{this.props.news.title}</h3>
                             <p>{this.props.news.article}</p>
                             <a href={this.props.news.link}>Read More</a>
+                            <p>Created on: {this.props.news.date}</p>
                         </div>
                         <button onClick={this.deleteArticle}
                             className="card-link">Delete</button> 
