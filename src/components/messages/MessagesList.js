@@ -2,15 +2,6 @@ import React, { Component } from "react"
 import "./Messages.css"
 
 export default class MessagesList extends Component {
-    componentDidMount() {
-        console.log(this.props.user.id)
-        const user = this.props.user.id
-        let newState = {};
-        newState.userId = user
-        newState.message = "";
-        newState.date = Date.now()
-        this.setState(newState)
-    }
     state = {
         userId: {},
         message: "",
@@ -53,7 +44,6 @@ export default class MessagesList extends Component {
                     <section className="messages">
                     {
                         this.props.messages.map(messageObject => {
-                            console.log(this.props.user.id)
                             let currentUser = this.props.users.find(u => u.id === messageObject.userId);
                             return <div id={`message--${messageObject.id}`} key={messageObject.id} className="card">
                                 <div className="card-body">

@@ -48,28 +48,10 @@
       "id": 4
     },
     {
-      "userId": 4,
-      "message": "Finally",
-      "date": 1536263391466,
+      "userId": 2,
+      "message": "sdfsadf",
+      "date": 1536264396140,
       "id": 5
-    },
-    {
-      "userId": 4,
-      "message": "Fucking Works!",
-      "date": 1536263395995,
-      "id": 6
-    },
-    {
-      "userId": 2,
-      "message": "sdsafd",
-      "date": 1536263430787,
-      "id": 7
-    },
-    {
-      "userId": 2,
-      "message": "zvzv",
-      "date": 1536263432689,
-      "id": 8
     }
   ],
   "events": [],

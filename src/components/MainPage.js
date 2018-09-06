@@ -83,7 +83,6 @@ export default class MainPage extends Component {
 
 
     render() {
-        console.log(this.state.user)
         return (
             <React.Fragment>
                     <div className="wrapper">
