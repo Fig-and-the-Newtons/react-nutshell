@@ -30,7 +30,7 @@ export default class MessagesList extends Component {
                 <div>
                     <section className="messages">
                     {
-                        this.props.messages.map(messageObject =>
+                        this.props.messages.map(messageObject => 
                             <div id={`message--${messageObject.id}`} key={messageObject.id} className="card">
                                 <div className="card-body">
                                     <h5 className="card-title">

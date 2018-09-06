@@ -23,6 +23,7 @@ class NavBar extends Component {
                     <li className="nav-item">
                         <Link className="nav-link" to="/events">Events</Link>
                     </li>
+                    <button className="Logout" onClick={this.props.handleLogout}>Logout</button>
                 </ul>
             </nav>
         )

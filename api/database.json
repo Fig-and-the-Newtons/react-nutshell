@@ -9,50 +9,64 @@
       "userName": "kayla",
       "password": "kayla",
       "id": 2
+    },
+    {
+      "userName": "me",
+      "password": "123",
+      "id": 3
     }
   ],
   "friends": [],
   "messages": [
     {
       "userId": 1,
-      "message": "heloo",
-      "date": 1536180156037,
+      "message": "sdfsd",
+      "date": 1536185042186,
       "id": 1
-    }
-  ],
-  "events": [
-    {
-      "name": "Kuma",
-      "location": "Tampa",
-      "date": "2018-09-13",
-      "id": 3
     },
     {
-      "name": "Practicing my crud skills",
-      "location": "Things to do",
-      "date": "2018-09-22",
+      "userId": 1,
+      "message": "sdfgdf 2.0",
+      "date": 1536185042186,
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "message": "sdfgsdf dfgsfhfgdhdghdfghdgfhdgf",
+      "date": 1536185042186,
+      "id": 3
+    }
+  ],
+  "events": [],
+  "news": [
+    {
+      "title": "User 2",
+      "article": "1",
+      "link": "https://github.com/Fig-and-the-Newtons/react-nutshell/projects/1",
+      "userId": 2,
+      "id": 4
+    },
+    {
+      "title": "User 3.5",
+      "article": "2",
+      "link": "https://github.com/Fig-and-the-Newtons/react-nutshell/projects/1",
+      "userId": 3,
+      "id": 6
+    },
+    {
+      "title": "User 3",
+      "article": "3",
+      "link": "https://github.com/Fig-and-the-Newtons/react-nutshell/projects/1",
+      "userId": 3,
       "id": 7
     },
     {
-      "name": "new event man",
-      "location": "checking checking",
-      "date": "2018-09-28",
-      "id": 11
+      "title": "Friends",
+      "article": "Hello",
+      "link": "https://github.com/Fig-and-the-Newtons/react-nutshell/projects/1",
+      "userId": 3,
+      "id": 8
     }
   ],
-  "news": [],
-  "tasks": [
-    {
-      "completionDate": "fff",
-      "title": "fff",
-      "completed": false,
-      "id": 1
-    },
-    {
-      "completionDate": "new one",
-      "title": "one",
-      "completed": true,
-      "id": 2
-    }
-  ]
+  "tasks": []
 }
