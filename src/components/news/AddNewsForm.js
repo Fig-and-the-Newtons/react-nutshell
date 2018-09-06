@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import DateMod from "./NewsDateF";
 
 export default class NewsForm extends Component {
 
@@ -24,7 +25,7 @@ export default class NewsForm extends Component {
                 title: this.state.title,
                 article: this.state.article,
                 link: this.state.link,
-                date: Date(Date.now()),
+                date: DateMod.getDate(),
                 userId: this.props.user.id
             }
 

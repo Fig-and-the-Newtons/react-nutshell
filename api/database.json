@@ -47,28 +47,34 @@
   ],
   "news": [
     {
-      "title": "User 2",
-      "article": "1",
+      "title": "Friends",
+      "article": "kfskdfn asdn j dfhsd asdfh fasdjdf sdnjkasnj hfuiasf jiadsjfasdji adijf s",
       "link": "https://github.com/Fig-and-the-Newtons/react-nutshell/projects/1",
+      "date": "09/06/2018 at 10:01:37 AM",
       "userId": 2,
-      "id": 4
+      "id": 12
     },
     {
       "title": "User 3",
       "article": "kfskdfn asdn j dfhsd asdfh fasdjdf sdnjkasnj hfuiasf jiadsjfasdji adijf s",
-      "link": "https://github.com/Fig-and-the-Newtons/react-nutshell/projects/1",
-      "date": "Thu Sep 06 2018 09:54:43 GMT-0500 (Central Daylight Time)",
-      "userId": 3,
-      "id": 10
-    },
-    {
-      "title": "User 3.5",
-      "article": "asdfadfasd",
       "link": "sdad",
-      "date": "Thu Sep 06 2018 09:54:55 GMT-0500 (Central Daylight Time)",
-      "userId": 3,
-      "id": 11
+      "date": "09/06/2018 at 10:02:35 AM",
+      "userId": 2,
+      "id": 13
     }
   ],
-  "tasks": []
+  "tasks": [
+    {
+      "completionDate": "tomorrow",
+      "title": "User 3",
+      "completed": false,
+      "id": 1
+    },
+    {
+      "completionDate": "tomorrow",
+      "title": "News articles",
+      "completed": false,
+      "id": 2
+    }
+  ]
 }
