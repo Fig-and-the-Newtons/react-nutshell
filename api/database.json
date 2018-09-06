@@ -25,7 +25,7 @@
   "messages": [
     {
       "userId": 1,
-      "message": "sdfsd",
+      "message": "sdfsd32",
       "date": 1536185042186,
       "id": 1
     },
@@ -54,36 +54,52 @@
       "id": 5
     }
   ],
-  "events": [],
+  "events": [
+    {
+      "name": "kayla",
+      "location": "1233",
+      "date": "2018-09-08",
+      "id": 1
+    }
+  ],
   "news": [
     {
-      "title": "User 2",
-      "article": "1",
+      "title": "Friends2.0",
+      "article": "kfskdfn asdn j dfhsd asdfh fasdjdf sdnjkasnj hfuiasf jiadsjfasdji adijf s",
       "link": "https://github.com/Fig-and-the-Newtons/react-nutshell/projects/1",
+      "date": "09/06/2018 at 10:44:16 AM",
       "userId": 2,
-      "id": 4
-    },
-    {
-      "title": "User 3.5",
-      "article": "2",
-      "link": "https://github.com/Fig-and-the-Newtons/react-nutshell/projects/1",
-      "userId": 3,
-      "id": 6
+      "id": 12
     },
     {
       "title": "User 3",
-      "article": "3",
-      "link": "https://github.com/Fig-and-the-Newtons/react-nutshell/projects/1",
-      "userId": 3,
-      "id": 7
+      "article": "kfskdfn asdn j dfhsd asdfh fasdjdf sdnjkasnj hfuiasf jiadsjfasdji adijf s",
+      "link": "sdad",
+      "date": "09/06/2018 at 10:02:35 AM",
+      "userId": 2,
+      "id": 13
     },
     {
       "title": "Friends",
-      "article": "Hello",
+      "article": "kfskdfn asdn j dfhsd asdfh fasdjdf sdnjkasnj hfuiasf jiadsjfasdji adijf s",
       "link": "https://github.com/Fig-and-the-Newtons/react-nutshell/projects/1",
+      "date": "09/06/2018 at 3:10:55 PM",
       "userId": 3,
-      "id": 8
+      "id": 14
     }
   ],
-  "tasks": []
+  "tasks": [
+    {
+      "completionDate": "tomorrow",
+      "title": "User 3.5",
+      "completed": false,
+      "id": 1
+    },
+    {
+      "completionDate": "tomorrow",
+      "title": "News articles",
+      "completed": false,
+      "id": 2
+    }
+  ]
 }

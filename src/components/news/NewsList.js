@@ -4,7 +4,6 @@ import NewsCard from "./NewsCard"
 export default class NewsList extends Component {
     
     render () {
-        // JavaScript stuff can be writen here!
         return (
             <React.Fragment>
                 <h2 className="header">News Articles</h2>
