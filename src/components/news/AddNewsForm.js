@@ -8,7 +8,6 @@ export default class NewsForm extends Component {
         link: ""
     }
 
-
     handleFieldChange = evt => {
         const stateToChange = {}
         stateToChange[evt.target.id] = evt.target.value
@@ -25,6 +24,7 @@ export default class NewsForm extends Component {
                 title: this.state.title,
                 article: this.state.article,
                 link: this.state.link,
+                date: Date(Date.now()),
                 userId: this.props.user.id
             }
 

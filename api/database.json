@@ -37,7 +37,14 @@
       "id": 3
     }
   ],
-  "events": [],
+  "events": [
+    {
+      "name": "kayla12",
+      "location": "1233",
+      "date": "2018-09-08",
+      "id": 1
+    }
+  ],
   "news": [
     {
       "title": "User 2",
@@ -47,25 +54,20 @@
       "id": 4
     },
     {
-      "title": "User 3.5",
-      "article": "2",
-      "link": "https://github.com/Fig-and-the-Newtons/react-nutshell/projects/1",
-      "userId": 3,
-      "id": 6
-    },
-    {
       "title": "User 3",
-      "article": "3",
+      "article": "kfskdfn asdn j dfhsd asdfh fasdjdf sdnjkasnj hfuiasf jiadsjfasdji adijf s",
       "link": "https://github.com/Fig-and-the-Newtons/react-nutshell/projects/1",
+      "date": "Thu Sep 06 2018 09:54:43 GMT-0500 (Central Daylight Time)",
       "userId": 3,
-      "id": 7
+      "id": 10
     },
     {
-      "title": "Friends",
-      "article": "Hello",
-      "link": "https://github.com/Fig-and-the-Newtons/react-nutshell/projects/1",
+      "title": "User 3.5",
+      "article": "asdfadfasd",
+      "link": "sdad",
+      "date": "Thu Sep 06 2018 09:54:55 GMT-0500 (Central Daylight Time)",
       "userId": 3,
-      "id": 8
+      "id": 11
     }
   ],
   "tasks": []
