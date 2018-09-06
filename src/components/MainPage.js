@@ -20,6 +20,7 @@ export default class MainPage extends Component {
         messages: [],
         events: [],
         friends: [],
+        users: [],
         login: true
     }
 
@@ -34,6 +35,8 @@ export default class MainPage extends Component {
         .then(news => {newState.news = news})
         .then(() => dbCalls.getAll("messages"))
         .then(messages => {newState.messages = messages})
+        .then(() => dbCalls.getAll("users"))
+        .then(users => {newState.users = users})
         .then(() => dbCalls.getDataByUserId(newState.user.id, "friends"))
         .then(friends => {newState.friends = friends})
         .then(() => {
@@ -74,6 +77,8 @@ export default class MainPage extends Component {
             .then(() => dbCalls.getDataByUserId(this.state.user.id, resource))
             .then(returnObject => this.setState({[resource]: returnObject}))
         }
+    get = (resource, id) => {return dbCalls.get(resource, id)
+    }
 
 
 
@@ -84,7 +89,7 @@ export default class MainPage extends Component {
                         <h1>Hello Fig! and his newtons!</h1>
                         <Route exact path="/news" render={(props) => {
                                 return <NewsList {...props} allNews={this.state.news} delete={this.delete}
-                                 />
+                                />
                         }} />
                         <Route exact path="/news/add" render={(props) => {
                                 return <AddNewsForm {...props} user={this.state.user} AddNewsForm={this.AddNewsForm} post={this.post} />
@@ -107,6 +112,8 @@ export default class MainPage extends Component {
                         <Route exact path="/messages" render={(props) => {
                             return <MessagesList {...props}
                             messages={this.state.messages}
+                            users={this.state.users}
+                            user={this.state.user}
                             delete={this.deleteMessage}
                             post={this.postMessage}
                             patch={this.patchMessage}
