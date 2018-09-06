@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import DateMod from "./NewsDateF"
 
 export default class AnimalEdit extends Component {
     // Set initial state
@@ -20,7 +21,8 @@ export default class AnimalEdit extends Component {
         const editedNews = {
             title: this.state.title,
             article: this.state.article,
-            link: this.state.link
+            link: this.state.link,
+            date: DateMod.getDate()
         }
         this.props.patch("news", editedNews, this.props.match.params.newsId)
         .then(() => this.props.history.push("/news"))
