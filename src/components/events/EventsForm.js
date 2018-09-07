@@ -35,28 +35,31 @@ export default class EventsForm extends Component {
             <React.Fragment>
                 <h3>Add a New Event</h3>
                 <form className="event-form">
-                    <div className="form-group">
+                <div className="columns">
+                    <div className="form-group column is-4">
                         <label htmlFor="eventName">Event</label>
                         <input type="text" required="true"
-                               className="form-control" id="name"
+                               className="form-control input is-rounded is-primary" id="name"
                                onChange={this.handleFieldChange}
                                placeholder="Event" />
-                    </div>
-                    <div className="form-group">
+                    </div></div>
+                    <div className="columns">
+                    <div className="form-group column is-4">
                         <label htmlFor="eventLocation">Location</label>
                         <input type="text" required="true"
-                               className="form-control"
+                               className="form-control input is-rounded is-primary"
                                onChange={this.handleFieldChange}
                                id="location"
                                 placeholder="Location" />
-                    </div>
-                    <div className="form-group">
+                    </div></div>
+                    <div className="columns">
+                    <div className="form-group column is-4">
                         <label htmlFor="eventDate">Date</label>
                         <input type="date" required="true"
-                               className="form-control"
+                               className="form-control input is-rounded is-primary"
                                onChange={this.handleFieldChange}
                                id="date"/>
-                    </div>
+                    </div></div>
                     <button type="submit" onClick={this.constructNewEvent} className="btn btn-primary">Submit</button>
 
                 </form>

@@ -50,48 +50,55 @@
   ],
   "events": [
     {
-      "name": "New Event for the Figs",
-      "location": "Things to do",
-      "date": "2018-09-27",
-      "id": 1,
-      "userId": 1
-    },
-    {
-      "name": "I love going to events",
-      "location": "this one is it big boy",
-      "date": "2018-12-04",
-      "id": 4,
-      "userId": 1
-    },
-    {
-      "name": "I love going to events",
-      "location": "Nash",
-      "date": "2018-10-01",
-      "userId": 2,
-      "id": 10
-    },
-    {
-      "name": "meetups",
-      "location": "Nss",
-      "date": "2018-09-22",
-      "userId": 2,
-      "id": 11
-    },
-    {
-      "name": "another card",
-      "location": "Nashville",
-      "date": "2018-09-13",
+      "name": "helping dejan",
+      "location": "nss",
+      "date": "2018-09-28",
       "userId": 1,
-      "id": 12
+      "id": 1
     },
     {
-      "userId": 2,
-      "message": "sdfsadf",
-      "date": 1536264396140,
+      "name": "helloopoo",
+      "location": "Nashville",
+      "date": "2018-10-10",
+      "userId": 1,
+      "id": 2
+    },
+    {
+      "name": "I love going to events",
+      "location": "big",
+      "date": "2018-09-21",
+      "userId": 1,
+      "id": 3
+    },
+    {
+      "name": "newnewnew",
+      "location": "nss",
+      "date": "2018-09-04",
+      "userId": 1,
       "id": 5
+    },
+    {
+      "name": "another one for the books",
+      "location": "yayaya",
+      "date": "2018-10-25",
+      "userId": 1,
+      "id": 6
+    },
+    {
+      "name": "more for the pals in need",
+      "location": "Nashville",
+      "date": "2018-09-19",
+      "userId": 1,
+      "id": 7
+    },
+    {
+      "name": "jonathan helped me",
+      "location": "nss",
+      "date": "2018-09-07",
+      "userId": 1,
+      "id": 8
     }
   ],
-  "events": [],
   "news": [
     {
       "title": "Friends2.0",
@@ -123,9 +130,15 @@
       "link": "www.google.com",
       "userId": 2,
       "id": 9
+    },
+    {
+      "title": "adsfadsf",
+      "article": "in Georgia",
+      "link": "www.google.com",
+      "date": "09/07/2018 at 9:44:25 AM",
+      "userId": 1,
+      "id": 14
     }
   ],
-  "tasks": [
-    
-  ]
+  "tasks": []
 }

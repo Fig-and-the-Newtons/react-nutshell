@@ -20,13 +20,13 @@ export default class EventsList extends Component {
                     <h1>Events</h1></div>
                 </section>
                 <div className="events">
-                    <div className="columns">
-                        <button type="button" onClick={() => this.props.history.push("/events/new")}>Add a New Event</button>
+                    <div className="columns is-centered">
+                        <button className=" is-info is-focused button is-medium" onClick={() => this.props.history.push("/events/new")}>Add a New Event</button>
                     </div>
-                    <div className="columns">
+                    <div className="columns is-multiline">
                         {
                             this.props.events.map(event => {
-                                return <div key={event.id} className="card card--event column">
+                                return <div key={event.id} className="card card--event column is-one-third">
                                     <header className="card-header">
                                         <h3 className="card-header-title is-link">{event.name}</h3>
                                     </header>
@@ -37,10 +37,10 @@ export default class EventsList extends Component {
                                             <p>{event.date}</p>
                                         </div>
                                     </div>
-                                    <div className="card-footer">
-                                        <button className={`delete--${event.id} card-footer-item button is-link`}
+                                    <div className="card-footer buttons">
+                                        <button className={`delete--${event.id} card-footer-item button is-primary is-outlined is-rounded is-paddingless`}
                                             onClick={() => this.props.delete("events", `${event.id}`)}>Delete</button>
-                                        <button className={`edit--${event.id} card-footer-item button is-link`}
+                                        <button className={`edit--${event.id} card-footer-item button is-primary is-outlined is-rounded is-paddingless`}
                                             onClick={() => this.props.history.push(`/events/edit/${event.id}`)}>Edit</button>
                                     </div>
                                 </div>
