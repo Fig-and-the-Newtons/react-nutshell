@@ -1,0 +1,25 @@
+.add-new-article {
+    display: flex;
+    margin-left: 2em;
+    margin-bottom: 1em;
+}
+
+.news-link {
+    margin-bottom: 1em;
+}
+
+.news-title {
+    font-size: 1.5em;
+    margin-top: .7em;
+}
+
+.news-form {
+    padding: 2em;    
+}
+
+.delete-news-button {
+    background-color: rgb(242,106,36);
+}
+.edit-news-button {
+    background-color: rgb(0,87,120);
+}

@@ -30,25 +30,33 @@ export default class TaskForm extends Component {
         }
     }
 
+    cancelNewTask = () => {
+        this.props.history.push("/tasks")
+    }
+
     render() {
         return (
             <React.Fragment>
-                <div className="formArea tasks">
-                    <form className="taskForm">
-                        <div className="form-group">
+                <div className="tasksFormArea tasks d-flex justify-content-center">
+                    <form className="taskForm d-flex flex-column justify-content-center">
+                        <div className="task-h1">Add a new task!</div>
+                        <div className="tasksForm-group">
                             <input type="text" required="true"
                                 className="form-control"
                                 onChange={this.handleFieldChange}
                                 id="completionDate"
                                 placeholder="Completion Date" />
                         </div>
-                        <div className="form-group">
+                        <div className="tasksForm-group">
                             <input type="text" required="true"
                                 className="form-control"
                                 onChange={this.handleFieldChange}
                                 id="title" placeholder="Task Title" />
                         </div>
-                        <button type="submit" onClick={this.constructNewTask} className="btn btn-primary form-group">Submit</button>
+                        <div className="d-flex justify-content-center">
+                            <button type="submit" onClick={this.constructNewTask} className="saveTaskbtn btn btn-success tasksForm-group">Submit</button>
+                            <button type="cancel" onClick={this.cancelNewTask} className="cancelTaskbtn btn btn-danger tasksForm-group">Cancel</button>
+                        </div>
                     </form>
                 </div>
             </React.Fragment>

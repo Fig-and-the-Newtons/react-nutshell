@@ -19,6 +19,11 @@
       "userName": "Figamus",
       "password": "12345",
       "id": 4
+    },
+    {
+      "userName": "kayla ",
+      "password": "kayla",
+      "id": 5
     }
   ],
   "friends": [],
@@ -46,6 +51,12 @@
       "message": "yoyoyoy",
       "date": 1536246117058,
       "id": 4
+    },
+    {
+      "userId": 1,
+      "message": "hello",
+      "date": 1536345365814,
+      "id": 5
     }
   ],
   "events": [
@@ -85,7 +96,7 @@
       "id": 7
     },
     {
-      "name": "jonathan helped me",
+      "name": "jonathan me",
       "location": "nss",
       "date": "2018-09-07",
       "userId": 1,
@@ -97,6 +108,20 @@
       "date": "2018-09-12",
       "userId": 1,
       "id": 9
+    },
+    {
+      "name": "sup dude ",
+      "location": "Nashville",
+      "date": "2018-09-12",
+      "userId": 1,
+      "id": 10
+    },
+    {
+      "name": "new one for kayla",
+      "location": "Nashville",
+      "date": "2018-09-17",
+      "userId": 5,
+      "id": 11
     }
   ],
   "news": [
@@ -117,14 +142,6 @@
       "id": 13
     },
     {
-      "title": "Friends",
-      "article": "kfskdfn asdn j dfhsd asdfh fasdjdf sdnjkasnj hfuiasf jiadsjfasdji adijf s",
-      "link": "https://github.com/Fig-and-the-Newtons/react-nutshell/projects/1",
-      "date": "09/06/2018 at 3:10:55 PM",
-      "userId": 3,
-      "id": 8
-    },
-    {
       "title": "Big Peaches",
       "article": "in Georgia",
       "link": "www.google.com",
@@ -140,5 +157,12 @@
       "id": 14
     }
   ],
-  "tasks": []
+  "tasks": [
+    {
+      "completionDate": "new task for alejandro",
+      "title": "one",
+      "completed": false,
+      "id": 1
+    }
+  ]
 }
