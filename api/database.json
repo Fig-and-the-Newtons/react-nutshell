@@ -54,16 +54,22 @@
       "id": 5
     },
     {
-      "userId": 3,
-      "message": "sadfasd",
-      "date": 1536329344337,
+      "userId": 4,
+      "message": "czvzxcv",
+      "date": 1536346674118,
       "id": 6
     },
     {
-      "userId": 3,
-      "message": "sdfasdf",
-      "date": 1536333756665,
+      "userId": 4,
+      "message": "xcvzxv",
+      "date": 1536346675242,
       "id": 7
+    },
+    {
+      "userId": 4,
+      "message": "??????",
+      "date": 1536346677048,
+      "id": 8
     }
   ],
   "events": [

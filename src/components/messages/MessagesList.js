@@ -27,6 +27,18 @@ export default class MessagesList extends Component {
             return name
         })
     }
+    scrollToBottom() {
+        const scrollHeight = this.messageList.scrollHeight;
+        const height = this.messageList.clientHeight;
+        const maxScrollTop = scrollHeight - height;
+        this.messageList.scrollTop = maxScrollTop > 0 ? maxScrollTop : 0;
+    }
+    componentDidUpdate() {
+        this.scrollToBottom();
+    }
+    componentDidMount() {
+        this.scrollToBottom();
+    }
 
     render () {
         let newMessage = {
@@ -36,33 +48,47 @@ export default class MessagesList extends Component {
         }
         return (
             <React.Fragment>
-                <div id="messagesContainer">
+                <div id="messagesContainer" className="mx-auto">
                 <div id="messageTitle">
                     <h3 className="header">Messages</h3>
                 </div>
                 <div>
-                    <section className="messages">
+                    <section id="messageList" className="messageList" ref={(div) => {
+                        this.messageList = div;
+                    }}>
                     {
                         this.props.messages.map(messageObject => {
                             let currentUser = this.props.users.find(u => u.id === messageObject.userId);
                             return <div id={`message--${messageObject.id}`} key={messageObject.id} className="card">
-                                <div className="card-body">
-                                    <h5 className="card-title">
+                            <div className="row">
+
+
+                                <div className="col-10 messageLeft">
+                                    <div className="h3">
                                         {currentUser.userName}
-                                    </h5>
-                                    <p className="message-text">{messageObject.message}</p>
-                                    <button onClick={() => this.props.delete("messages", messageObject.id)} className="card-link btn btn-success">Delete</button>
-                                    <button type="button"className="btn btn-success" onClick={() => {
+                                    </div>
+                                    <div>{messageObject.message}</div>
+                                </div>
+
+                                <div className="col-2 buttonDiv">
+                                    <div className="row">
+                                    <button type="button"className="btn messageEditButton col-12" onClick={() => {
                                         this.props.history.push(`/messages/edit/${messageObject.id}`)}
                                     }>Edit</button>
+                                    <button onClick={() => this.props.delete("messages", messageObject.id)} className="card-link btn messageDeleteButton col-12">Delete</button>
+                                    </div>
                                 </div>
+
+
                             </div>
+                                    </div>
                         })
+                        
                     }
                     </section>
                 </div>
-                <textarea ref="message" id="message" onChange={this.handleFieldChange}></textarea>
-                <button id="submitButton" type="button" className="btn btn-success" onClick={() => {
+                <textarea className="textarea" ref="message" id="message" onChange={this.handleFieldChange}></textarea>
+                <button id="submitButton" type="button" className="btn" onClick={() => {
                         this.props.post("messages", newMessage)
                         .then(this.handleSubmit)
                     }}>Post Message</button>
