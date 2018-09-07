@@ -6,7 +6,7 @@ import "./Navbar.css"
 class NavBar extends Component {
     render() {
         return (
-            <nav className="navbar navbar-light light-blue flex-md-nowrap p-0 shadow">
+            <nav id="navbar" className="navbar navbar-light light-blue flex-md-nowrap p-0 shadow">
                 <ul className="nav nav-pills">
                 <li className="nav-item">
                         <Link className="nav-link text-info" to="/">Home</Link>

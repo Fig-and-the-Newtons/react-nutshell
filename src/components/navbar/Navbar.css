@@ -5,3 +5,8 @@
     top: 7px;
     margin-right: 9px;
 }
+
+#navbar {
+    position: fixed;
+    width: 100%;    
+}
