@@ -85,7 +85,7 @@
   "tasks": [
     {
       "completionDate": "9/4/18",
-      "title": "Complete adding tasks",
+      "title": "redo cancel button",
       "completed": false,
       "id": 1
     },
@@ -94,6 +94,12 @@
       "title": "heyo random stuff whats up words trying make a long task that has a lot of words or letters to see if it wraps and does what I want it to do, holy run on sentence batman",
       "completed": false,
       "id": 2
+    },
+    {
+      "completionDate": "9/3/18",
+      "title": "landing carousel",
+      "completed": true,
+      "id": 4
     }
   ]
 }

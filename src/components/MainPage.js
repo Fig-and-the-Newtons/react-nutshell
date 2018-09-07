@@ -86,7 +86,6 @@ export default class MainPage extends Component {
         return (
             <React.Fragment>
                     <div className="wrapper">
-                        <h1>Hello Fig! and his newtons!</h1>
                         <Route exact path="/news" render={(props) => {
                                 return <NewsList {...props} allNews={this.state.news} delete={this.delete}
                                 />

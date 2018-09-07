@@ -53,7 +53,7 @@ export default class TaskCard extends Component {
                     :
                         <button onClick={() => this.handleEditClicked()} className="btn btn-primary taskBtn">Edit</button>
                 }
-                <div className="card w-75">
+                <div className="card w-100">
                     <div className="card-header">
                         <div className="header-left w-50 d-flex justify-content-start">
                             <input onClick={() => this.props.patch("tasks", {completed: true}, this.props.task.id)} className="taskCheckbox" name="completed" type="checkbox"/>

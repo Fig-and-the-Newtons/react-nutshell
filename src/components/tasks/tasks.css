@@ -1,3 +1,7 @@
+.taskList {
+    padding-top: 1rem;
+}
+
 .taskTitle {
     margin: 2rem 0 2rem 0;
 }
@@ -7,7 +11,7 @@
 }
 
 .taskBtn {
-    width: 5.5rem;
+    min-width: 5.5rem;
     min-height: 6.25rem;
 }
 
@@ -17,10 +21,11 @@
 }
 
 .taskCheckbox {
-    margin-top: 1.7em;
-    margin-bottom: 1.7em;
-    margin-left: 0;
-    margin-right: .5em;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: .5rem;
+    height: 2rem;
+    width: 2rem;
 }
 
 .tasksForm-group {
