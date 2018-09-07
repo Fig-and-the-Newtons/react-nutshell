@@ -19,6 +19,11 @@
       "userName": "Figamus",
       "password": "12345",
       "id": 4
+    },
+    {
+      "userName": "kayla ",
+      "password": "kayla",
+      "id": 5
     }
   ],
   "friends": [],
@@ -48,31 +53,61 @@
       "id": 4
     },
     {
-      "userId": 3,
-      "message": "sdfasdf",
-      "date": 1536329341239,
+      "userId": 1,
+      "message": "hello",
+      "date": 1536345365814,
       "id": 5
-    },
-    {
-      "userId": 3,
-      "message": "sadfasd",
-      "date": 1536329344337,
-      "id": 6
-    },
-    {
-      "userId": 3,
-      "message": "sdfasdf",
-      "date": 1536333756665,
-      "id": 7
     }
   ],
   "events": [
     {
-      "name": "kayla",
-      "location": "qergqergqr",
+      "name": "helping dejan",
+      "location": "nss",
       "date": "2018-09-28",
-      "userId": 3,
+      "userId": 1,
       "id": 1
+    },
+    {
+      "name": "helloopoo",
+      "location": "Nashville",
+      "date": "2018-10-10",
+      "userId": 1,
+      "id": 2
+    },
+    {
+      "name": "newnewnew",
+      "location": "nss",
+      "date": "2018-09-04",
+      "userId": 1,
+      "id": 5
+    },
+    {
+      "name": "jonathan me",
+      "location": "nss",
+      "date": "2018-09-07",
+      "userId": 1,
+      "id": 8
+    },
+    {
+      "name": "new event",
+      "location": "nss",
+      "date": "2018-09-12",
+      "userId": 1,
+      "id": 9
+    },
+    {
+      "name": "sup dude ",
+      "location": "Nashville",
+      "date": "2018-09-12",
+      "userId": 1,
+      "id": 10
+    },
+    {
+      "name": "new one for kayla",
+      "location": "Nashville",
+      "date": "2018-09-17",
+      "userId": 5,
+      "id": 11
     }
   ],
   "news": [
@@ -100,54 +135,20 @@
       "id": 9
     },
     {
-      "title": "Why Hipsters love manbuns",
-      "article": "Salvia direct trade waistcoat, twee whatever stumptown polaroid bicycle rights prism. Cornhole direct trade forage, freegan four dollar toast skateboard synth blog locavore flexitarian mixtape. Live-edge messenger bag heirloom art party meditation pug. Artisan polaroid disrupt franzen hell of pickled enamel pin shoreditch intelligentsia. Lomo trust fund deep v you probably haven't heard of them vice hella meditation fanny pack echo park taxidermy dreamcatcher. Occupy viral keffiyeh, cliche everyday carry sustainable vice food truck YOLO gochujang meditation ramps 3 wolf moon. Before they sold out lo-fi hammock pour-over shaman mixtape sustainable typewriter.",
-      "link": "http://nashvillesoftwareschool.com/",
-      "date": "09/07/2018 at 9:28:21 AM",
-      "userId": 3,
+      "title": "adsfadsf",
+      "article": "in Georgia",
+      "link": "www.google.com",
+      "date": "09/07/2018 at 9:44:25 AM",
+      "userId": 1,
       "id": 14
-    },
-    {
-      "title": "We are in Nashville so....More stuff about hipsters",
-      "article": "Narwhal kinfolk brunch retro. Gentrify live-edge listicle farm-to-table. Deep v health goth lumbersexual yr. Jean shorts man bun yr, activated charcoal marfa jianbing literally fingerstache biodiesel everyday carry chicharrones food truck hella pitchfork deep v. Yuccie asymmetrical echo park yr hashtag, kitsch craft beer chicharrones fanny pack af health goth single-origin coffee. Tbh trust fund biodiesel, banh mi 3 wolf moon craft beer pickled shaman aesthetic keytar wayfarers cronut thundercats disrupt. Fashion axe swag cronut activated charcoal.",
-      "link": "http://nashvillesoftwareschool.com/",
-      "date": "09/07/2018 at 9:32:23 AM",
-      "userId": 3,
-      "id": 15
-    },
-    {
-      "title": "test",
-      "article": "test",
-      "link": "test",
-      "date": "09/07/2018 at 11:42:43 AM",
-      "userId": 5,
-      "id": 16
     }
   ],
   "tasks": [
     {
-      "completionDate": "tomorrow",
-      "title": "Friends",
+      "completionDate": "new task for alejandro",
+      "title": "one",
       "completed": false,
       "id": 1
-    },
-    {
-      "completionDate": "tomorrow",
-      "title": "Friends",
-      "completed": false,
-      "id": 2
-    },
-    {
-      "completionDate": "tomorrow",
-      "title": "Friends",
-      "completed": false,
-      "id": 3
-    },
-    {
-      "completionDate": "tomorrow",
-      "title": "Friends",
-      "completed": false,
-      "id": 4
     }
   ]
 }

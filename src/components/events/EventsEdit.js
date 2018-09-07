@@ -40,31 +40,37 @@ export default class EventsEdit extends Component {
         return(
             <React.Fragment>
                 <form className="events-form">
-                <div className="form-group">
+                <div className="columns">
+
+                <div className="form-group column is-4">
                     <label htmlFor="eventName">Event</label>
                     <input type="text" required="true"
-                           className="form-control"
+                           className="form-control input is-rounded is-primary"
                            onChange={this.handleFieldChange}
                            id="name"
                            placeholder="Event name"
                            defaultValue={this.state.name} />
-                </div>
-                <div className="form-group">
+                </div></div>
+                <div className="columns">
+
+                <div className="form-group column is-4">
                         <label htmlFor="eventLocation">Location</label>
                         <input type="text" required="true"
-                               className="form-control"
+                               className="form-control input is-rounded is-primary"
                                onChange={this.handleFieldChange}
                                id="location"
                                placeholder="Location" 
-                               defaultValue={this.state.location}/></div>
-                <div className="form-group">
+                               defaultValue={this.state.location}/></div></div>
+                <div className="columns">
+
+                <div className="form-group column is-4">
                         <label htmlFor="eventDate">Date</label>
                         <input type="date" required="true"
-                               className="form-control"
+                               className="form-control input is-rounded is-primary"
                                onChange={this.handleFieldChange}
                                id="date"
                                defaultValue={this.state.date}/>
-                    </div>
+                    </div></div>
                     <button type="submit" onClick={this.editTheEvent} className="btn btn-primary">Save</button>
 
                 </form>
