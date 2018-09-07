@@ -58,13 +58,13 @@ export default class TaskCard extends Component {
                 {
                     (this.state.edit) ?
                         <div className="">
-                            <button onClick={this.constructNewTask} className="btn btn-primary taskBtn">Save</button>
+                            <button onClick={this.constructNewTask} className="saveTaskbtn btn btn-secondary taskBtn">Save</button>
                             <br></br>
-                            <button onClick={this.cancelNewTask} className="btn btn-danger taskBtn">Cancel</button>
+                            <button onClick={this.cancelNewTask} className="cancelTaskbtn btn btn-danger taskBtn">Cancel</button>
                         </div>
 
                     :
-                        <button onClick={() => this.handleEditClicked()} className="btn btn-primary taskBtn">Edit</button>
+                        <button onClick={() => this.handleEditClicked()} className="editTaskbtn btn btn-secondary taskBtn">Edit</button>
                 }
                 <div className="card w-100">
                     <div className="card-header">
@@ -92,7 +92,7 @@ export default class TaskCard extends Component {
                         }
                     </div>
                 </div>
-                <button onClick={() => this.props.delete("tasks", this.props.task.id)} className="btn btn-secondary taskBtn">Delete</button>
+                <button onClick={() => this.props.delete("tasks", this.props.task.id)} className="deleteTaskbtn btn btn-secondary taskBtn">Delete</button>
             </div>
         )
     }

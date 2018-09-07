@@ -114,6 +114,14 @@
       "date": "09/07/2018 at 9:32:23 AM",
       "userId": 3,
       "id": 15
+    },
+    {
+      "title": "test",
+      "article": "test",
+      "link": "test",
+      "date": "09/07/2018 at 11:42:43 AM",
+      "userId": 5,
+      "id": 16
     }
   ],
   "tasks": [
@@ -122,6 +130,24 @@
       "title": "Friends",
       "completed": false,
       "id": 1
+    },
+    {
+      "completionDate": "tomorrow",
+      "title": "Friends",
+      "completed": false,
+      "id": 2
+    },
+    {
+      "completionDate": "tomorrow",
+      "title": "Friends",
+      "completed": false,
+      "id": 3
+    },
+    {
+      "completionDate": "tomorrow",
+      "title": "Friends",
+      "completed": false,
+      "id": 4
     }
   ]
 }
