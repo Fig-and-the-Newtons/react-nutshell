@@ -2,6 +2,26 @@
     padding-top: 1rem;
 }
 
+.newTaskbtn { 
+    background-color: rgb(0,142,151);
+}
+
+.editTaskbtn {
+    background-color: rgb(242,106,36);
+}
+
+.saveTaskbtn {
+    background-color: rgb(0,142,151);
+}
+
+.cancelTaskbtn {
+    background-color: rgb(242,106,36);
+}
+
+.deleteTaskbtn {
+    background-color: rgb(0,87,120);
+}
+
 .taskTitle {
     margin: 2rem 0 2rem 0;
 }

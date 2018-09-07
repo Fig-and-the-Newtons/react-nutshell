@@ -14,7 +14,7 @@ export default class TaskList extends Component {
                     <div className="taskDeck">
                         <div className="taskTitle container d-flex justify-content-center">
                             <div className="task-h1 taskTile w-50 float-left">Task List</div>
-                            <button type="button" className="btn btn-success taskTile w-25" onClick={() => { this.props.history.push("/tasks/new")}}>
+                            <button type="button" className="newTaskbtn btn btn-secondary taskTile w-25" onClick={() => { this.props.history.push("/tasks/new")}}>
                                 <div className="task-h2">New Task</div>
                             </button>
                         </div>

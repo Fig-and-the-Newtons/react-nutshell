@@ -30,6 +30,10 @@ export default class TaskForm extends Component {
         }
     }
 
+    cancelNewTask = () => {
+        this.props.history.push("/tasks")
+    }
+
     render() {
         return (
             <React.Fragment>
@@ -49,7 +53,10 @@ export default class TaskForm extends Component {
                                 onChange={this.handleFieldChange}
                                 id="title" placeholder="Task Title" />
                         </div>
-                        <button type="submit" onClick={this.constructNewTask} className="btn btn-primary tasksForm-group">Submit</button>
+                        <div className="d-flex justify-content-center">
+                            <button type="submit" onClick={this.constructNewTask} className="saveTaskbtn btn btn-success tasksForm-group">Submit</button>
+                            <button type="cancel" onClick={this.cancelNewTask} className="cancelTaskbtn btn btn-danger tasksForm-group">Cancel</button>
+                        </div>
                     </form>
                 </div>
             </React.Fragment>
