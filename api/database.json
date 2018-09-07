@@ -84,7 +84,7 @@
   ],
   "tasks": [
     {
-      "completionDate": "9/4/18",
+      "completionDate": "9/7/18",
       "title": "redo cancel button",
       "completed": false,
       "id": 1
@@ -98,7 +98,7 @@
     {
       "completionDate": "9/3/18",
       "title": "landing carousel",
-      "completed": true,
+      "completed": false,
       "id": 4
     }
   ]
