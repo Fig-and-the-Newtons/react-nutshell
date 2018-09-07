@@ -32,9 +32,22 @@ export default class TaskCard extends Component {
            this.setState({edit:false});
     }
 
+    cancelNewTask = () => {
+        this.setState({
+            task: {
+                completionDate: this.props.task.completionDate,
+                title: this.props.task.title,
+            },
+            edit:false
+        });
+    }
 
     componentDidMount = () => {
-        const task = this.props.tasks.find(a => a.id === this.props.task.id) || {}
+        const result = this.props.tasks.find(a => a.id === this.props.task.id) || {}
+
+        const task = {
+            ...result
+        }
 
         this.setState({task})
     }
@@ -47,7 +60,7 @@ export default class TaskCard extends Component {
                         <div className="">
                             <button onClick={this.constructNewTask} className="btn btn-primary taskBtn">Save</button>
                             <br></br>
-                            <button onClick={this.constructNewTask} className="btn btn-danger taskBtn">Edit</button>
+                            <button onClick={this.cancelNewTask} className="btn btn-danger taskBtn">Edit</button>
                         </div>
 
                     :
@@ -63,7 +76,7 @@ export default class TaskCard extends Component {
                         <div className="header-right w-50 d-flex justify-content-end">
                         {
                             (this.state.edit) ?
-                                <input type="text" required="true" className="form-control" onChange={(evt)=>{this.handleFieldChange("completionDate", evt)}} id="completionDate" value={this.state.task.completionDate} placeholder={this.props.task.completionDate} />
+                                <input type="text" required="true" className="form-control" onChange={(evt)=>{this.handleFieldChange("completionDate", evt)}} id="completionDate" value={this.state.task.completionDate} />
 
                             :
                                 <div className="task-h3">{this.props.task.completionDate}</div>  
@@ -73,7 +86,7 @@ export default class TaskCard extends Component {
                     <div className="card-body">
                         {
                             (this.state.edit) ?
-                                <input type="text" required="true" className="form-control" onChange={(evt)=>{this.handleFieldChange("title", evt)}} id="title" value={this.state.task.title} placeholder={this.props.task.title} />
+                                <input type="text" required="true" className="form-control" onChange={(evt)=>{this.handleFieldChange("title", evt)}} id="title" value={this.state.task.title} />
                             :
                                 <div className="task-h3">{this.props.task.title}</div>  
                         }
