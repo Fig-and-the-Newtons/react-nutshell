@@ -1,3 +1,70 @@
-#messsagesContainer {
-    height: 10em;
+#messageList{
+    height: 38em;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+#messagesContainer{
+    width: 80%;
+}
+#submitButton {
+    background-color: rgba(0,87,120);
+    color: white;
+}
+#submitButton:hover {
+    background-color: rgba(0,142,151);
+    color: white;
+}
+.messageEditButton {
+    background-color: rgba(0,87,120);
+    color: white;
+}
+.messageEditButton:hover {
+    background-color: rgba(0,142,151);
+    color: white;
+}
+.messageDeleteButton {
+    background-color: rgba(242,106,36);
+    color: white;
+}
+.messageDeleteButton:hover {
+    background-color: rgba(245,130,32);
+    color: white;
+}
+.buttonDiv{
+    align-content: center;
+}
+.messageLeft{
+    padding: 20px;
+}
+
+#messageList::-webkit-scrollbar {
+    display: none;
+    min-width: 6px;
+    width: 6px;
+    max-width: 6px;
+    min-height: 6px;
+    height: 6px;
+    max-height: 6px;
+    background: #e5e5e5;
+    box-shadow: inset 0px 50px 0px rgba(82,179,217,0.9), inset 0px -52px 0px #fafafa;
+}
+
+#messageList::-webkit-scrollbar-thumb {
+    background: #bbb;
+    border: none;
+    border-radius: 100px;
+    border: solid 3px #e5e5e5;
+    box-shadow: inset 0px 0px 3px #999;
+}
+
+#messageList::hover::-webkit-scrollbar {
+    display: block;
+    background: #b0b0b0;
+    box-shadow: inset 0px 0px 3px #888;
+}
+
+#messageList::-webkit-scrollbar-thumb:active {
+    display: block;
+    background: #aaa;
+    box-shadow: inset 0px 0px 3px #7f7f7f;
 }
