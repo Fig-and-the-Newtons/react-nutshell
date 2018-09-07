@@ -33,22 +33,23 @@ export default class TaskForm extends Component {
     render() {
         return (
             <React.Fragment>
-                <div className="formArea tasks">
-                    <form className="taskForm">
-                        <div className="form-group">
+                <div className="tasksFormArea tasks d-flex justify-content-center">
+                    <form className="taskForm d-flex flex-column justify-content-center">
+                        <div className="task-h1">Add a new task!</div>
+                        <div className="tasksForm-group">
                             <input type="text" required="true"
                                 className="form-control"
                                 onChange={this.handleFieldChange}
                                 id="completionDate"
                                 placeholder="Completion Date" />
                         </div>
-                        <div className="form-group">
+                        <div className="tasksForm-group">
                             <input type="text" required="true"
                                 className="form-control"
                                 onChange={this.handleFieldChange}
                                 id="title" placeholder="Task Title" />
                         </div>
-                        <button type="submit" onClick={this.constructNewTask} className="btn btn-primary form-group">Submit</button>
+                        <button type="submit" onClick={this.constructNewTask} className="btn btn-primary tasksForm-group">Submit</button>
                     </form>
                 </div>
             </React.Fragment>
