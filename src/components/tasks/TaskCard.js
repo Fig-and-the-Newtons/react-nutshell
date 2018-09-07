@@ -58,7 +58,7 @@ export default class TaskCard extends Component {
                 {
                     (this.state.edit) ?
                         <div className="">
-                            <button onClick={this.constructNewTask} className="saveTaskbtn btn btn-secondary taskBtn">Save</button>
+                            <button onClick={this.constructNewTask} className="saveTaskbtn btn btn-success taskBtn">Save</button>
                             <br></br>
                             <button onClick={this.cancelNewTask} className="cancelTaskbtn btn btn-danger taskBtn">Cancel</button>
                         </div>
