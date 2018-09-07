@@ -12,6 +12,7 @@ import MessagesList from "./messages/MessagesList"
 import MessagesEdit from "./messages/MessagesEdit"
 import EditNews from "./news/EditNews"
 import MainList from "./main/MainList"
+import './MainPage.css'
 
 export default class MainPage extends Component {
     state = {

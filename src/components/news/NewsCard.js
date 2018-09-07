@@ -17,11 +17,11 @@ export default class NewsCard extends Component {
                     <hr/>
                     <CardText>{this.props.news.article}</CardText>
                     <CardText>Posted: {this.props.news.date}</CardText>
-                    <CardLink href={this.props.news.link} className="news-link">Read More</CardLink>
+                    <CardLink href={this.props.news.link} className="news-link text-info">Read More</CardLink>
                     <div>
-                    <Button onClick={this.deleteArticle} className="card-link" color="danger">Delete</Button>
+                    <Button onClick={this.deleteArticle} className="card-link delete-news-button">Delete</Button>
                     <Button onClick={() => this.props.history.push(`/news/edit/${this.props.news.id}`)}
-                    className="card-link" color="secondary">Edit</Button>
+                    className="card-link edit-news-button">Edit</Button>
                     </div>
                 </Card>
             </div>

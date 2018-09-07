@@ -58,6 +58,12 @@
       "message": "sadfasd",
       "date": 1536329344337,
       "id": 6
+    },
+    {
+      "userId": 3,
+      "message": "sdfasdf",
+      "date": 1536333756665,
+      "id": 7
     }
   ],
   "events": [
@@ -110,5 +116,12 @@
       "id": 15
     }
   ],
-  "tasks": []
+  "tasks": [
+    {
+      "completionDate": "tomorrow",
+      "title": "Friends",
+      "completed": false,
+      "id": 1
+    }
+  ]
 }
