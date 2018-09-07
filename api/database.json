@@ -64,13 +64,6 @@
       "id": 2
     },
     {
-      "name": "I love going to events",
-      "location": "big",
-      "date": "2018-09-21",
-      "userId": 1,
-      "id": 3
-    },
-    {
       "name": "newnewnew",
       "location": "nss",
       "date": "2018-09-04",
@@ -97,6 +90,13 @@
       "date": "2018-09-07",
       "userId": 1,
       "id": 8
+    },
+    {
+      "name": "new event",
+      "location": "nss",
+      "date": "2018-09-12",
+      "userId": 1,
+      "id": 9
     }
   ],
   "news": [
