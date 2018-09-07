@@ -6,7 +6,9 @@ export default class MainList extends Component {
     render(){
         return (
             <div>
-                <img src={Logo} alt="fig-and-the-newtons" className="logo" />
+                <div className="header">
+                    <img src={Logo} alt="fig-and-the-newtons" className="logo" />
+                </div>
                 <h1 className="header">Hello Fig! and his newtons!</h1>
             </div>
         )
