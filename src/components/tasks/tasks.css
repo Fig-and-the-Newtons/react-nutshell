@@ -8,9 +8,79 @@
 
 .taskBtn {
     width: 5.5rem;
+    min-height: 6.25rem;
 }
 
 .taskCard {
     min-height: 10rem;
     min-width: 60rem;
+}
+
+.taskCheckbox {
+    margin-top: 1.7em;
+    margin-bottom: 1.7em;
+    margin-left: 0;
+    margin-right: .5em;
+}
+
+.tasksForm-group {
+    margin-top: .50rem;
+    margin-bottom: .50rem;
+    margin-left: .50rem;
+    margin-right: .50rem;
+}
+
+.task-h1 {
+    display: block;
+    font-size: 2em;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+.task-h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-top: 0.83em;
+    margin-bottom: 0.83em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+.task-h3 {
+    display: block;
+    font-size: 1.17em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+.task-h4 {
+    display: block;
+    font-size: 1em;
+    margin-top: 1.33em;
+    margin-bottom: 1.33em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+.task-h5 {
+    display: block;
+    font-size: .83em;
+    margin-top: 1.67em;
+    margin-bottom: 1.67em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+.task-h6 {
+    display: block;
+    font-size: .67em;
+    margin-top: 2.33em;
+    margin-bottom: 2.33em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
 }
