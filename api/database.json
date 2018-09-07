@@ -24,6 +24,11 @@
       "userName": "kayla ",
       "password": "kayla",
       "id": 5
+    },
+    {
+      "userName": "tyes",
+      "password": "asd",
+      "id": 6
     }
   ],
   "friends": [],
@@ -57,6 +62,12 @@
       "message": "hello",
       "date": 1536345365814,
       "id": 5
+    },
+    {
+      "userId": 6,
+      "message": "asdasdasa",
+      "date": 1536347630527,
+      "id": 6
     }
   ],
   "events": [
@@ -141,14 +152,22 @@
       "date": "09/07/2018 at 9:44:25 AM",
       "userId": 1,
       "id": 14
+    },
+    {
+      "title": "sdasd",
+      "article": "asdasd",
+      "link": "asdasd",
+      "date": "09/07/2018 at 2:13:14 PM",
+      "userId": 6,
+      "id": 15
     }
   ],
   "tasks": [
     {
-      "completionDate": "new task for alejandro",
-      "title": "one",
-      "completed": false,
-      "id": 1
+      "completionDate": "asda",
+      "title": "asda",
+      "completed": true,
+      "id": 2
     }
   ]
 }
