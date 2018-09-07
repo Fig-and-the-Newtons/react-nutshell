@@ -1,5 +1,7 @@
 import React, { Component } from "react"
-// import { Link } from "react-router-dom"
+import { Card, Button, CardTitle, CardText, CardLink } from 'reactstrap';
+// import "bulma/css/bulma.css"
+
 
 export default class NewsCard extends Component {
     deleteArticle = () => {
@@ -8,22 +10,23 @@ export default class NewsCard extends Component {
 
     render() {
         return (
-            <div className="card">
-                <div className="card-body">
-                    <div className="card-title">
-                        <div>
-                            <h3>{this.props.news.title}</h3>
-                            <p>{this.props.news.article}</p>
-                            <a href={this.props.news.link}>Read More</a>
-                            <p>Created on: {this.props.news.date}</p>
-                        </div>
-                        <button onClick={this.deleteArticle}
-                            className="card-link">Delete</button> 
-                        <button onClick={() => this.props.history.push(`/news/edit/${this.props.news.id}`)}
-                            className="card-link">Edit</button> 
+
+            <div>
+                <Card body>
+                    <CardTitle className="news-title">{this.props.news.title}</CardTitle>
+                    <hr/>
+                    <CardText>{this.props.news.article}</CardText>
+                    <CardText>Posted: {this.props.news.date}</CardText>
+                    <CardLink href={this.props.news.link} className="news-link text-info">Read More</CardLink>
+                    <div>
+                    <Button onClick={this.deleteArticle} className="card-link delete-news-button">Delete</Button>
+                    <Button onClick={() => this.props.history.push(`/news/edit/${this.props.news.id}`)}
+                    className="card-link edit-news-button">Edit</Button>
                     </div>
-                </div>
+                </Card>
             </div>
         )
     }
 }
+
+

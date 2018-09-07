@@ -11,6 +11,8 @@ import EventsEdit from "./events/EventsEdit"
 import MessagesList from "./messages/MessagesList"
 import MessagesEdit from "./messages/MessagesEdit"
 import EditNews from "./news/EditNews"
+import MainList from "./main/MainList"
+import './MainPage.css'
 
 export default class MainPage extends Component {
     state = {
@@ -86,6 +88,9 @@ export default class MainPage extends Component {
         return (
             <React.Fragment>
                     <div className="wrapper">
+                        <Route exact path="/" render={(props) => {
+                                return <MainList />
+                        }} />
                         <Route exact path="/news" render={(props) => {
                                 return <NewsList {...props} allNews={this.state.news} delete={this.delete}
                                 />

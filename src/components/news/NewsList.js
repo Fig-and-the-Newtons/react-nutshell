@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import NewsCard from "./NewsCard"
+import { Button } from 'reactstrap';
+import "./News.css"
+
 
 export default class NewsList extends Component {
     
@@ -8,8 +11,8 @@ export default class NewsList extends Component {
             <React.Fragment>
                 <h2 className="header">News Articles</h2>
                 <div>
-                <button type="button" className="add-new-article"
-                    onClick={() => {this.props.history.push("/news/add")}}>Write a post</button>
+                <Button type="button" color="info" className="add-new-article"
+                    onClick={() => {this.props.history.push("/news/add")}}>Write a post</Button>
                 </div>
                 <section className="news">
                 {
