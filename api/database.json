@@ -29,6 +29,11 @@
       "userName": "tyes",
       "password": "asd",
       "id": 6
+    },
+    {
+      "userName": "thatmikeparrish",
+      "password": "lkj",
+      "id": 7
     }
   ],
   "friends": [],
@@ -167,7 +172,22 @@
       "completionDate": "asda",
       "title": "asda",
       "completed": true,
+      "userId": 7,
       "id": 2
+    },
+    {
+      "completionDate": "2018-09-29",
+      "title": "sdfghjkl",
+      "completed": false,
+      "userId": 7,
+      "id": 3
+    },
+    {
+      "completionDate": "2018-09-05",
+      "title": "asdasdasdasda",
+      "completed": false,
+      "userId": 7,
+      "id": 4
     }
   ]
 }

@@ -23,7 +23,8 @@ export default class TaskForm extends Component {
             const task = {
                 completionDate: this.state.completionDate,
                 title: this.state.title,
-                completed: this.state.completed
+                completed: this.state.completed,
+                userId: this.props.user.id
             }
 
             this.props.post("tasks", task).then(() => this.props.history.push("/tasks"))
@@ -41,7 +42,7 @@ export default class TaskForm extends Component {
                     <form className="taskForm d-flex flex-column justify-content-center">
                         <div className="task-h1">Add a new task!</div>
                         <div className="tasksForm-group">
-                            <input type="text" required="true"
+                            <input type="date" required="true"
                                 className="form-control"
                                 onChange={this.handleFieldChange}
                                 id="completionDate"

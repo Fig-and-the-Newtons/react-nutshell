@@ -76,7 +76,7 @@ export default class TaskCard extends Component {
                         <div className="header-right w-50 d-flex justify-content-end">
                         {
                             (this.state.edit) ?
-                                <input type="text" required="true" className="form-control" onChange={(evt)=>{this.handleFieldChange("completionDate", evt)}} id="completionDate" value={this.state.task.completionDate} />
+                                <input type="date" required="true" className="form-control" onChange={(evt)=>{this.handleFieldChange("completionDate", evt)}} id="completionDate" value={this.state.task.completionDate} />
 
                             :
                                 <div className="task-h3">{this.props.task.completionDate}</div>  

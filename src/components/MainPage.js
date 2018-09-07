@@ -134,7 +134,7 @@ export default class MainPage extends Component {
                             return <TaskList {...props} delete={this.delete} patch={this.patch} tasks={this.state.tasks} />
                         }} />
                         <Route exact path="/tasks/new" render={(props) => {
-                            return <TaskForm {...props} post={this.post} tasks={this.state.tasks} />
+                            return <TaskForm {...props} post={this.post} tasks={this.state.tasks} user={this.state.user}/>
                         }} />
                     </div>
             </React.Fragment>

@@ -5,7 +5,8 @@ export default class TaskList extends Component {
     //console.log("TaskList.js");
     
     render() {
-        const filteredTasks = this.props.tasks.filter(task => task.completed !== true) || {}
+        const filteredTasks = this.props.tasks.filter(task => task.completed !== true)
+        
 
         return (
             <React.Fragment>
