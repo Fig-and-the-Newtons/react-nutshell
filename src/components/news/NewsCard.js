@@ -11,32 +11,20 @@ export default class NewsCard extends Component {
     render() {
         return (
 
-        <div>
-            <Card body>
-                <CardTitle>{this.props.news.title}</CardTitle>
-                <CardText>{this.props.news.article}</CardText>
-                <CardLink href={this.props.news.link}>Read More</CardLink>
-                <Button onClick={this.deleteArticle} className="card-link">Delete</Button> 
-                <Button onClick={() => this.props.history.push(`/news/edit/${this.props.news.id}`)}
-                className="card-link">Edit</Button>
-            </Card>
-        </div>
-            // <div className="card">
-            //     <div className="card-body">
-            //         <div className="card-title">
-            //             <div>
-            //                 <h3>{this.props.news.title}</h3>
-            //                 <p>{this.props.news.article}</p>
-            //                 <a href={this.props.news.link}>Read More</a>
-            //                 <p>Created on: {this.props.news.date}</p>
-            //             </div>
-            //             <button onClick={this.deleteArticle}
-            //                 className="card-link">Delete</button> 
-            //             <button onClick={() => this.props.history.push(`/news/edit/${this.props.news.id}`)}
-            //                 className="card-link">Edit</button> 
-            //         </div>
-            //     </div>
-            // </div>
+            <div>
+                <Card body>
+                    <CardTitle className="news-title">{this.props.news.title}</CardTitle>
+                    <hr/>
+                    <CardText>{this.props.news.article}</CardText>
+                    <CardText>Posted: {this.props.news.date}</CardText>
+                    <CardLink href={this.props.news.link} className="news-link">Read More</CardLink>
+                    <div>
+                    <Button onClick={this.deleteArticle} className="card-link" color="danger">Delete</Button>
+                    <Button onClick={() => this.props.history.push(`/news/edit/${this.props.news.id}`)}
+                    className="card-link" color="secondary">Edit</Button>
+                    </div>
+                </Card>
+            </div>
         )
     }
 }

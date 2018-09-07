@@ -38,7 +38,7 @@ export default class MessagesList extends Component {
             <React.Fragment>
                 <div id="messagesContainer">
                 <div id="messageTitle">
-                    <h3>Messages</h3>
+                    <h3 className="header">Messages</h3>
                 </div>
                 <div>
                     <section className="messages">

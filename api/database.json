@@ -46,6 +46,18 @@
       "message": "yoyoyoy",
       "date": 1536246117058,
       "id": 4
+    },
+    {
+      "userId": 3,
+      "message": "sdfasdf",
+      "date": 1536329341239,
+      "id": 5
+    },
+    {
+      "userId": 3,
+      "message": "sadfasd",
+      "date": 1536329344337,
+      "id": 6
     }
   ],
   "events": [
@@ -82,18 +94,18 @@
       "id": 9
     },
     {
-      "title": "User 3.5",
-      "article": "kfskdfn asdn j dfhsd asdfh fasdjdf sdnjkasnj hfuiasf jiadsjfasdji adijf s",
-      "link": "https://github.com/Fig-and-the-Newtons/react-nutshell/projects/1",
-      "date": "09/06/2018 at 5:01:22 PM",
+      "title": "Why Hipsters love manbuns",
+      "article": "Salvia direct trade waistcoat, twee whatever stumptown polaroid bicycle rights prism. Cornhole direct trade forage, freegan four dollar toast skateboard synth blog locavore flexitarian mixtape. Live-edge messenger bag heirloom art party meditation pug. Artisan polaroid disrupt franzen hell of pickled enamel pin shoreditch intelligentsia. Lomo trust fund deep v you probably haven't heard of them vice hella meditation fanny pack echo park taxidermy dreamcatcher. Occupy viral keffiyeh, cliche everyday carry sustainable vice food truck YOLO gochujang meditation ramps 3 wolf moon. Before they sold out lo-fi hammock pour-over shaman mixtape sustainable typewriter.",
+      "link": "http://nashvillesoftwareschool.com/",
+      "date": "09/07/2018 at 9:28:21 AM",
       "userId": 3,
       "id": 14
     },
     {
-      "title": "Friends",
-      "article": "kfskdfn asdn j dfhsd asdfh fasdjdf sdnjkasnj hfuiasf jiadsjfasdji adijf s",
-      "link": "https://github.com/Fig-and-the-Newtons/react-nutshell/projects/1",
-      "date": "09/06/2018 at 4:13:22 PM",
+      "title": "We are in Nashville so....More stuff about hipsters",
+      "article": "Narwhal kinfolk brunch retro. Gentrify live-edge listicle farm-to-table. Deep v health goth lumbersexual yr. Jean shorts man bun yr, activated charcoal marfa jianbing literally fingerstache biodiesel everyday carry chicharrones food truck hella pitchfork deep v. Yuccie asymmetrical echo park yr hashtag, kitsch craft beer chicharrones fanny pack af health goth single-origin coffee. Tbh trust fund biodiesel, banh mi 3 wolf moon craft beer pickled shaman aesthetic keytar wayfarers cronut thundercats disrupt. Fashion axe swag cronut activated charcoal.",
+      "link": "http://nashvillesoftwareschool.com/",
+      "date": "09/07/2018 at 9:32:23 AM",
       "userId": 3,
       "id": 15
     }

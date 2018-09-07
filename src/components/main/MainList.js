@@ -1,10 +1,11 @@
 import React, { Component } from "react";
+import "./MainList.css"
 
 export default class MainList extends Component {
     render(){
         return (
             <div>
-                <h3>Hello!</h3>
+                <h1 className="header">Hello Fig! and his newtons!</h1>
             </div>
         )
     }

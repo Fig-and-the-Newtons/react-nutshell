@@ -41,33 +41,35 @@ export default class AnimalEdit extends Component {
     
         return (
             <React.Fragment>
-                <form className="NewsForm">
-                    <div className="form-group">
-                        <label htmlFor="title">Title</label>
-                        <input type="text" required="true"
-                               className="form-control"
-                               onChange={this.handleFieldChange}
-                               id="title"
-                               defaultValue={this.state.title} />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="article">Article</label>
-                        <input type="text" required="true"
-                               className="form-control"
-                               onChange={this.handleFieldChange}
-                               id="article" 
-                               defaultValue={this.state.article} />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="link">Link</label>
-                        <input type="text" required="true"
-                               className="form-control"
-                               onChange={this.handleFieldChange}
-                               id="link" 
-                               defaultValue={this.state.link} />
-                    </div>
-                    <button type="submit" onClick={this.edit} className="btn btn-primary">Submit</button>
-                </form>
+                <div className="news-form">
+                    <form className="NewsForm">
+                        <div className="form-group">
+                            <label htmlFor="title">Title</label>
+                            <input type="text" required="true"
+                                className="form-control"
+                                onChange={this.handleFieldChange}
+                                id="title"
+                                defaultValue={this.state.title} />
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="article">Article</label>
+                            <input type="text" required="true"
+                                className="form-control"
+                                onChange={this.handleFieldChange}
+                                id="article" 
+                                defaultValue={this.state.article} />
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="link">Link</label>
+                            <input type="text" required="true"
+                                className="form-control"
+                                onChange={this.handleFieldChange}
+                                id="link" 
+                                defaultValue={this.state.link} />
+                        </div>
+                        <button type="submit" onClick={this.edit} className="btn btn-success">Save Changes</button>
+                    </form>
+                </div>
             </React.Fragment>
         )
     }

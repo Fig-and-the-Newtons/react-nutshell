@@ -17,7 +17,7 @@ export default class EventsList extends Component {
             <React.Fragment>
                 <section className="hero">
                 <div className="hero-body">
-                    <h1>Events</h1></div>
+                    <h1 className="header">Events</h1></div>
                 </section>
                 <div className="events">
                     <div className="columns">
